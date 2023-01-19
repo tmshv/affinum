@@ -11,8 +11,10 @@
         "@remix-run/react": "^1.11.0",
         "@remix-run/vercel": "^1.11.0",
         "@vercel/node": "^2.6.2",
+        "mapbox-gl": "^2.12.0",
         "react": "^18.2.0",
-        "react-dom": "^18.2.0"
+        "react-dom": "^18.2.0",
+        "react-map-gl": "^7.0.21"
     },
     "devDependencies": {
         "@remix-run/dev": "^1.11.0",
@@ -24,6 +26,6 @@
         "typescript": "^4.8.4"
     },
     "engines": {
-        "node": ">=14"
+        "node": ">=18"
     }
 }

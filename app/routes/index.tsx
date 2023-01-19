@@ -1,5 +1,9 @@
-import styles from "~/styles/index.css";
 import mapboxStyles from "mapbox-gl/dist/mapbox-gl.css";
+
+import styles from "~/styles/index.css";
+import mapboxCustomStyles from "~/styles/mapbox.css";
+import { links as popupStyles } from "~/components/map-popup";
+
 import { lazy, Suspense } from "react";
 import ClientOnly from "~/components/client-only";
 
@@ -15,6 +19,11 @@ export function links() {
             rel: "stylesheet",
             href: mapboxStyles
         },
+        {
+            rel: "stylesheet",
+            href: mapboxCustomStyles,
+        },
+        ...popupStyles(),
     ];
 }
 

@@ -1,0 +1,12 @@
+.caption {
+    padding: 8px;
+    background: white;
+
+    max-width: 100px;
+    box-sizing: border-box;
+}
+
+.cover {
+    display: block;
+}
+

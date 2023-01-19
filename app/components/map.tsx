@@ -4,7 +4,7 @@ export type MapProps = {
 }
 
 const Map: React.FC<MapProps> = () => {
-    const mapboxAccessToken=(window as any).ENV.MAPBOX_ACCESS_KEY}
+    const mapboxAccessToken=(window as any).ENV.MAPBOX_ACCESS_KEY
 
     return (
         <MapGl

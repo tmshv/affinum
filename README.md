@@ -1,0 +1,2 @@
+# affinum
+map.affinum.tech

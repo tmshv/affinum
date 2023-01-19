@@ -43,15 +43,16 @@ const Map: React.FC<MapProps> = () => {
             mapStyle="mapbox://styles/mapbox/light-v11"
             mapboxAccessToken={mapboxAccessToken}
             projection={"globe"}
-        // onLoad={event => {
-        //     const map = event.target;
-        //     map.on("move", () => {
-        //         console.log("coord", map.getCenter())
-        //         console.log("zoom", map.getZoom())
-        //         console.log("bearing", map.getBearing())
-        //         console.log("pitch", map.getPitch())
-        //     })
-        // }}
+            onLoad={event => {
+                // const map = event.target;
+                // console.log(map.getStyle())
+                //     map.on("move", () => {
+                //         console.log("coord", map.getCenter())
+                //         console.log("zoom", map.getZoom())
+                //         console.log("bearing", map.getBearing())
+                //         console.log("pitch", map.getPitch())
+                //     })
+            }}
         >
 
             <Source id="projects" type="geojson" data="/projects.geojson">

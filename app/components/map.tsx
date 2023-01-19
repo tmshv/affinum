@@ -102,9 +102,9 @@ const Map: React.FC<MapProps> = () => {
             }}
         >
             <Source id="country" type="geojson" data="/russia.geojson">
-                <Layer {...countryLayerFill} beforeId={"water"} />
-                <Layer {...countryLayer} />
-                <Layer {...countryLayer2} />
+                <Layer {...countryLayerFill} beforeId={"building"} />
+                <Layer {...countryLayer} beforeId={"building"} />
+                <Layer {...countryLayer2} beforeId={"building"} />
             </Source>
             <Source id="projects" type="geojson" data="/projects.geojson">
                 <Layer {...layerStyleCircle} />

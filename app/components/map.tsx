@@ -1,10 +1,33 @@
-import { Map as MapGl } from "react-map-gl";
+import type { LayerProps } from "react-map-gl";
+import { Layer, Map as MapGl, Source } from "react-map-gl";
+
+const layerStyleCircle: LayerProps = {
+    id: "project-circle",
+    type: "circle",
+    paint: {
+        "circle-radius": 8,
+        "circle-color": "#111111",
+    }
+};
+
+const layerStyleSymbol: LayerProps = {
+    id: "project-id",
+    type: "symbol",
+    paint: {
+        "text-color": "#ffffff",
+    },
+    layout: {
+        "text-field": ["get", "id"],
+        "text-size": 10,
+        "text-allow-overlap": true,
+    }
+};
 
 export type MapProps = {
 }
 
 const Map: React.FC<MapProps> = () => {
-    const mapboxAccessToken=(window as any).ENV.MAPBOX_ACCESS_KEY
+    const mapboxAccessToken = (window as any).ENV.MAPBOX_ACCESS_KEY
 
     return (
         <MapGl
@@ -29,7 +52,13 @@ const Map: React.FC<MapProps> = () => {
         //         console.log("pitch", map.getPitch())
         //     })
         // }}
-        />
+        >
+
+            <Source id="projects" type="geojson" data="/projects.geojson">
+                <Layer {...layerStyleCircle} />
+                <Layer {...layerStyleSymbol} />
+            </Source>
+        </MapGl>
     );
 }
 

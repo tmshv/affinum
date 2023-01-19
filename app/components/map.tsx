@@ -23,6 +23,44 @@ const layerStyleSymbol: LayerProps = {
     }
 };
 
+const countryLayerFill: LayerProps = {
+    id: "country-fill",
+    type: "fill",
+    paint: {
+        "fill-color": "#344a19",
+        "fill-opacity": 0.05,
+    },
+    layout: {
+    }
+};
+
+const countryLayer: LayerProps = {
+    id: "country-line",
+    type: "line",
+    paint: {
+        "line-color": "#82827d",
+        "line-width": 2,
+        "line-dasharray": [6, 3],
+    },
+    layout: {
+        "line-cap": "square",
+    }
+};
+
+const countryLayer2: LayerProps = {
+    id: "country-line-2",
+    type: "line",
+    paint: {
+        "line-color": "#d0cfcd",
+        "line-width": 2,
+        "line-dasharray": [6, 3],
+        "line-offset": -2,
+    },
+    layout: {
+        "line-cap": "square",
+    }
+};
+
 export type MapProps = {
 }
 
@@ -54,7 +92,11 @@ const Map: React.FC<MapProps> = () => {
                 //     })
             }}
         >
-
+            <Source id="country" type="geojson" data="/russia.geojson">
+                <Layer {...countryLayerFill} beforeId={"water"} />
+                <Layer {...countryLayer} />
+                <Layer {...countryLayer2} />
+            </Source>
             <Source id="projects" type="geojson" data="/projects.geojson">
                 <Layer {...layerStyleCircle} />
                 <Layer {...layerStyleSymbol} />

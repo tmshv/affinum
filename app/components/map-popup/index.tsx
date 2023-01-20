@@ -54,7 +54,7 @@ const MapPopup: React.FC<MapPopupProps> = () => {
             setInfo({
                 coord: geom.coordinates,
                 title: feature.properties.name,
-                src: "/p.png",
+                src: feature.properties.src,
             });
         }
 
@@ -77,7 +77,9 @@ const MapPopup: React.FC<MapPopupProps> = () => {
             anchor="bottom"
             onClose={() => setInfo(null)}
         >
-            <img className="cover" src={info.src} alt={"1"} width={100} height={100} />
+            {!info.src ? null : (
+                <img className="cover" src={info.src} alt={"1"} width={100} height={100} />
+            )}
             <div className="caption">
                 {info.title}
             </div>

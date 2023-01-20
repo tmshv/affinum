@@ -8,5 +8,7 @@
 
 .cover {
     display: block;
+
+    object-fit: cover;
 }
 

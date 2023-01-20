@@ -65,6 +65,11 @@ const Map: React.FC<MapProps> = () => {
             }}
             mapStyle="mapbox://styles/tmshv/cld4aqnw8000e01qwdzz15s6s"
             mapboxAccessToken={mapboxAccessToken}
+            minZoom={1}
+            maxBounds={[
+                [8.414178767074475, 28.939372626536084],
+                [196.44705902596996, 83.1613784193168],
+            ]}
             // projection={"globe"}
             onLoad={event => {
                 // const map = event.target;

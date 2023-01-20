@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { LayerProps, Popup } from "react-map-gl";
+import type { LayerProps } from "react-map-gl";
 import { Layer, Map as MapGl, Source } from "react-map-gl";
 import MapLayerHoverable from "./map-layer-hoverable";
 import MapPopup from "./map-popup";
@@ -72,23 +71,12 @@ const Map: React.FC<MapProps> = () => {
                 [196.44705902596996, 83.1613784193168],
             ]}
             // projection={"globe"}
-            onLoad={event => {
-                // const map = event.target;
-                // console.log(map.getStyle())
-                // map.on("move", () => {
-                //     console.log("coord", map.getCenter())
-                //     console.log("zoom", map.getZoom())
-                //     console.log("bearing", map.getBearing())
-                //     console.log("pitch", map.getPitch())
-                // })
-            }}
         >
             <MapLayerHoverable />
             <Source id="projects" type="geojson" data="/projects.geojson">
                 <Layer {...layerStyleCircle} />
                 <Layer {...layerStyleSymbol} />
             </Source>
-
             <MapPopup />
         </MapGl>
     );

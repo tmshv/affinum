@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { LayerProps, Popup } from "react-map-gl";
 import { Layer, Map as MapGl, Source } from "react-map-gl";
+import MapLayerHoverable from "./map-layer-hoverable";
 import MapPopup from "./map-popup";
 
 const layerStyleCircle: LayerProps = {
@@ -82,6 +83,7 @@ const Map: React.FC<MapProps> = () => {
                 // })
             }}
         >
+            <MapLayerHoverable />
             <Source id="projects" type="geojson" data="/projects.geojson">
                 <Layer {...layerStyleCircle} />
                 <Layer {...layerStyleSymbol} />

@@ -41,7 +41,6 @@ const MapPopup: React.FC<MapPopupProps> = () => {
             })
 
             if (fs.length === 0) {
-                console.log("click on nothing")
                 setInfo(null);
                 return
             }
@@ -69,7 +68,6 @@ const MapPopup: React.FC<MapPopupProps> = () => {
     }, [current]);
 
     if (!info) {
-        console.log("no popcoord")
         return null;
     }
 

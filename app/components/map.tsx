@@ -87,8 +87,7 @@ const Map: React.FC<MapProps> = () => {
                 <Layer {...layerStyleSymbol} />
             </Source>
 
-            <MapPopup>
-            </MapPopup>
+            <MapPopup />
         </MapGl>
     );
 }

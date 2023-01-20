@@ -25,30 +25,6 @@ const layerStyleSymbol: LayerProps = {
     }
 };
 
-const countryLayerFill: LayerProps = {
-    id: "country-fill",
-    type: "fill",
-    paint: {
-        "fill-color": "#344a19",
-        "fill-opacity": 0.05,
-    },
-    layout: {
-    }
-};
-
-const countryLayer: LayerProps = {
-    id: "country-line",
-    type: "line",
-    paint: {
-        "line-color": "#82827d",
-        "line-width": 2,
-        "line-dasharray": [6, 3],
-    },
-    layout: {
-        "line-cap": "square",
-    }
-};
-
 const countryLayer2: LayerProps = {
     id: "country-line-2",
     type: "line",
@@ -87,7 +63,7 @@ const Map: React.FC<MapProps> = () => {
                 width: "100%",
                 height: "100%",
             }}
-            mapStyle="mapbox://styles/mapbox/light-v11"
+            mapStyle="mapbox://styles/tmshv/cld4aqnw8000e01qwdzz15s6s"
             mapboxAccessToken={mapboxAccessToken}
             // projection={"globe"}
             onLoad={event => {
@@ -101,11 +77,6 @@ const Map: React.FC<MapProps> = () => {
                 // })
             }}
         >
-            <Source id="country" type="geojson" data="/russia.geojson">
-                <Layer {...countryLayerFill} beforeId={"building"} />
-                <Layer {...countryLayer} beforeId={"building"} />
-                <Layer {...countryLayer2} beforeId={"building"} />
-            </Source>
             <Source id="projects" type="geojson" data="/projects.geojson">
                 <Layer {...layerStyleCircle} />
                 <Layer {...layerStyleSymbol} />

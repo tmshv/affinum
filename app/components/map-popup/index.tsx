@@ -1,6 +1,7 @@
 import mapboxgl from "mapbox-gl";
 import { useEffect, useState } from "react";
 import { Popup, useMap } from "react-map-gl";
+import useMapPointer from "~/hooks/map-pointer";
 
 import styles from "./styles.css";
 
@@ -25,6 +26,8 @@ export type MapPopupProps = {
 const MapPopup: React.FC<MapPopupProps> = () => {
     const [info, setInfo] = useState<Info | null>(null);
     const { current } = useMap();
+
+    useMapPointer(["project-circle"]);
 
     useEffect(() => {
         if (!current) {

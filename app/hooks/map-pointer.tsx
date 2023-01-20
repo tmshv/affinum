@@ -1,4 +1,3 @@
-import mapboxgl from "mapbox-gl";
 import { useEffect } from "react";
 import { useMap } from "react-map-gl";
 
@@ -10,11 +9,11 @@ export default function useMapPointer(layerIds: string[]) {
         if(!map) {
             return;
         }
-        const over = async (event: mapboxgl.MapMouseEvent) => {
+        const over = async () => {
             const element = map.getCanvasContainer();
             element.style.cursor = "pointer";
         }
-        const out = async (event: mapboxgl.MapMouseEvent) => {
+        const out = async () => {
             const element = map.getCanvasContainer();
             element.style.cursor = "default";
         }
@@ -26,6 +25,6 @@ export default function useMapPointer(layerIds: string[]) {
             map.off("mouseover", over);
             map.off("mouseout", out);
         }
-    }, [current]);
+    }, [current, layerIds]);
 }
 

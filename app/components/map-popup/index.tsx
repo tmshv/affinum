@@ -50,6 +50,9 @@ const MapPopup: React.FC<MapPopupProps> = () => {
             const geom = feature.geometry as GeoJSON.Point;
 
             setInfo(null);
+            if (!feature.properties) {
+                return;
+            }
             await nextTick();
             setInfo({
                 coord: geom.coordinates,

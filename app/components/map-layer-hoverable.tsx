@@ -14,6 +14,7 @@ const layer: LayerProps = {
             0.0
         ],
     },
+    maxzoom: 6,
 };
 
 export type MapLayerHoverableProps = {

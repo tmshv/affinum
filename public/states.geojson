@@ -191,7 +191,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Московская область"
+            }
         },
         {
             "type": "Feature",
@@ -393,7 +395,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Рязанская область"
+            }
         },
         {
             "type": "Feature",
@@ -493,7 +497,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Липецкая область"
+            }
         },
         {
             "type": "Feature",
@@ -589,7 +595,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Тамбовская область"
+            }
         },
         {
             "type": "Feature",
@@ -717,7 +725,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Воронежская область"
+            }
         },
         {
             "type": "Feature",
@@ -871,7 +881,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Пензенская область"
+            }
         },
         {
             "type": "Feature",
@@ -1053,7 +1065,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Ульяновская область"
+            }
         },
         {
             "type": "Feature",
@@ -1253,7 +1267,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Саратовская область"
+            }
         },
         {
             "type": "Feature",
@@ -1459,7 +1475,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Самарская область"
+            }
         },
         {
             "type": "Feature",
@@ -1683,7 +1701,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Нижегородская область"
+            }
         },
         {
             "type": "Feature",
@@ -1889,7 +1909,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Мордовия"
+            }
         },
         {
             "type": "Feature",
@@ -2017,7 +2039,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Владимирская область"
+            }
         },
         {
             "type": "Feature",
@@ -2125,7 +2149,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Курская область"
+            }
         },
         {
             "type": "Feature",
@@ -2217,7 +2243,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Орловская область"
+            }
         },
         {
             "type": "Feature",
@@ -2309,7 +2337,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Автономна Республіка Крим"
+            }
         },
         {
             "type": "Feature",
@@ -2505,7 +2535,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Волгоградская область"
+            }
         },
         {
             "type": "Feature",
@@ -2857,7 +2889,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Оренбургская область"
+            }
         },
         {
             "type": "Feature",
@@ -3165,7 +3199,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Башкортостан"
+            }
         },
         {
             "type": "Feature",
@@ -3489,7 +3525,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Челябинская область"
+            }
         },
         {
             "type": "Feature",
@@ -4003,7 +4041,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Татарстан"
+            }
         },
         {
             "type": "Feature",
@@ -4267,7 +4307,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Свердловская область"
+            }
         },
         {
             "type": "Feature",
@@ -4461,7 +4503,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Чувашия"
+            }
         },
         {
             "type": "Feature",
@@ -4557,7 +4601,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Тульская область"
+            }
         },
         {
             "type": "Feature",
@@ -4669,7 +4715,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Ярославская область"
+            }
         },
         {
             "type": "Feature",
@@ -4769,7 +4817,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Калужская область"
+            }
         },
         {
             "type": "Feature",
@@ -4881,7 +4931,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Смоленская область"
+            }
         },
         {
             "type": "Feature",
@@ -5015,7 +5067,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Брянская область"
+            }
         },
         {
             "type": "Feature",
@@ -5115,7 +5169,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Белгородская область"
+            }
         },
         {
             "type": "Feature",
@@ -5323,7 +5379,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Ростовская область"
+            }
         },
         {
             "type": "Feature",
@@ -5427,7 +5485,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Ивановская область"
+            }
         },
         {
             "type": "Feature",
@@ -5643,7 +5703,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Костромская область"
+            }
         },
         {
             "type": "Feature",
@@ -5839,7 +5901,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Новгородская область"
+            }
         },
         {
             "type": "Feature",
@@ -6137,7 +6201,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Москва"
+            }
         },
         {
             "type": "Feature",
@@ -6197,7 +6263,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Калининградская область"
+            }
         },
         {
             "type": "Feature",
@@ -6365,7 +6433,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Ставропольский край"
+            }
         },
         {
             "type": "Feature",
@@ -6497,7 +6567,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Краснодарский край"
+            }
         },
         {
             "type": "Feature",
@@ -6755,7 +6827,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Калмыкия"
+            }
         },
         {
             "type": "Feature",
@@ -6879,7 +6953,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Дагестан"
+            }
         },
         {
             "type": "Feature",
@@ -6951,7 +7027,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Чечня"
+            }
         },
         {
             "type": "Feature",
@@ -7011,7 +7089,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Карачаево-Черкесия"
+            }
         },
         {
             "type": "Feature",
@@ -7087,7 +7167,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Кабардино-Балкария"
+            }
         },
         {
             "type": "Feature",
@@ -7163,7 +7245,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Северная Осетия — Алания"
+            }
         },
         {
             "type": "Feature",
@@ -7341,7 +7425,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Астраханская область"
+            }
         },
         {
             "type": "Feature",
@@ -7568,8 +7654,8 @@
                                 57.057719
                             ],
                             [
-                                49.247709,
-                                57.042111
+                                49.247348,
+                                57.04216
                             ],
                             [
                                 49.176605,
@@ -7759,7 +7845,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Кировская область"
+            }
         },
         {
             "type": "Feature",
@@ -8095,7 +8183,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Вологодская область"
+            }
         },
         {
             "type": "Feature",
@@ -8219,7 +8309,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Марий Эл"
+            }
         },
         {
             "type": "Feature",
@@ -8485,7 +8577,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Удмуртия"
+            }
         },
         {
             "type": "Feature",
@@ -8761,7 +8855,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Пермский край"
+            }
         },
         {
             "type": "Feature",
@@ -9237,7 +9333,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Республика Коми"
+            }
         },
         {
             "type": "Feature",
@@ -9409,7 +9507,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Курганская область"
+            }
         },
         {
             "type": "Feature",
@@ -9747,7 +9847,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Тюменская область"
+            }
         },
         {
             "type": "Feature",
@@ -10129,7 +10231,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Омская область"
+            }
         },
         {
             "type": "Feature",
@@ -10381,7 +10485,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Новосибирская область"
+            }
         },
         {
             "type": "Feature",
@@ -10673,7 +10779,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Томская область"
+            }
         },
         {
             "type": "Feature",
@@ -11141,7 +11249,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Ханты-Мансийский автономный округ — Югра"
+            }
         },
         {
             "type": "Feature",
@@ -12107,7 +12217,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Архангельская область"
+            }
         },
         {
             "type": "Feature",
@@ -12337,7 +12449,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Кемеровская область"
+            }
         },
         {
             "type": "Feature",
@@ -12569,7 +12683,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Алтайский край"
+            }
         },
         {
             "type": "Feature",
@@ -12753,7 +12869,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Республика Алтай"
+            }
         },
         {
             "type": "Feature",
@@ -12997,7 +13115,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Республика Тыва"
+            }
         },
         {
             "type": "Feature",
@@ -13753,7 +13873,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Иркутская область"
+            }
         },
         {
             "type": "Feature",
@@ -14129,7 +14251,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Бурятия"
+            }
         },
         {
             "type": "Feature",
@@ -14517,7 +14641,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Забайкальский край"
+            }
         },
         {
             "type": "Feature",
@@ -14957,7 +15083,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Амурская область"
+            }
         },
         {
             "type": "Feature",
@@ -15065,7 +15193,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Еврейская автономная область"
+            }
         },
         {
             "type": "Feature",
@@ -15743,7 +15873,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Хабаровский край"
+            }
         },
         {
             "type": "Feature",
@@ -15915,7 +16047,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Приморский край"
+            }
         },
         {
             "type": "Feature",
@@ -16395,7 +16529,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Магаданская область"
+            }
         },
         {
             "type": "Feature",
@@ -17017,7 +17153,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Чукотский автономный округ"
+            }
         },
         {
             "type": "Feature",
@@ -17447,7 +17585,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Камчатский край"
+            }
         },
         {
             "type": "Feature",
@@ -19201,7 +19341,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Республика Саха (Якутия)"
+            }
         },
         {
             "type": "Feature",
@@ -19365,7 +19507,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Псковская область"
+            }
         },
         {
             "type": "Feature",
@@ -19589,7 +19733,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Ленинградская область"
+            }
         },
         {
             "type": "Feature",
@@ -21363,7 +21509,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Красноярский край"
+            }
         },
         {
             "type": "Feature",
@@ -21547,7 +21695,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Республика Хакасия"
+            }
         },
         {
             "type": "Feature",
@@ -22251,7 +22401,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Ямало-Ненецкий автономный округ"
+            }
         },
         {
             "type": "Feature",
@@ -22299,7 +22451,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Ингушетия"
+            }
         },
         {
             "type": "Feature",
@@ -22379,7 +22533,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Адыгея"
+            }
         },
         {
             "type": "Feature",
@@ -22725,7 +22881,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Ненецкий автономный округ"
+            }
         },
         {
             "type": "Feature",
@@ -22757,7 +22915,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Администрация Томской области"
+            }
         },
         {
             "type": "Feature",
@@ -22839,7 +22999,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Санкт-Петербург"
+            }
         },
         {
             "type": "Feature",
@@ -23079,7 +23241,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Республика Карелия"
+            }
         },
         {
             "type": "Feature",
@@ -23517,7 +23681,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Сахалинская область"
+            }
         },
         {
             "type": "Feature",
@@ -23557,7 +23723,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Севастополь"
+            }
         },
         {
             "type": "Feature",
@@ -23781,7 +23949,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Тверская область"
+            }
         },
         {
             "type": "Feature",
@@ -23803,8 +23973,8 @@
                             68.915451
                         ],
                         [
-                            28.929304,
-                            69.051912
+                            28.929294,
+                            69.051915
                         ],
                         [
                             29.056653,
@@ -23819,20 +23989,20 @@
                             69.424947
                         ],
                         [
-                            30.085325,
-                            69.658111
+                            30.085292,
+                            69.658097
                         ],
                         [
-                            30.51607,
-                            69.540501
+                            30.515981,
+                            69.540421
                         ],
                         [
-                            30.938802,
-                            69.560737
+                            30.938879,
+                            69.560999
                         ],
                         [
-                            30.817529,
-                            69.794822
+                            30.817641,
+                            69.794844
                         ],
                         [
                             31.440811,
@@ -23929,7 +24099,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Мурманская область"
+            }
         },
         {
             "type": "Feature",
@@ -23969,7 +24141,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Севастополь"
+            }
         },
         {
             "type": "Feature",
@@ -24061,7 +24235,9 @@
                     ]
                 ]
             },
-            "properties": {}
+            "properties": {
+                "name": "Республика Крым"
+            }
         }
     ]
 }

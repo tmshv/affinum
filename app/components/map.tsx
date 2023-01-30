@@ -25,20 +25,6 @@ const layerStyleSymbol: LayerProps = {
     }
 };
 
-const countryLayer2: LayerProps = {
-    id: "country-line-2",
-    type: "line",
-    paint: {
-        "line-color": "#d0cfcd",
-        "line-width": 2,
-        "line-dasharray": [6, 3],
-        "line-offset": -2,
-    },
-    layout: {
-        "line-cap": "square",
-    }
-};
-
 export type MapProps = {
 }
 
@@ -70,7 +56,7 @@ const Map: React.FC<MapProps> = () => {
                 [8.414178767074475, 28.939372626536084],
                 [196.44705902596996, 83.1613784193168],
             ]}
-            // projection={"globe"}
+            projection={"mercator"}
         >
             <MapLayerHoverable />
             <Source id="projects" type="geojson" data="/projects.geojson">

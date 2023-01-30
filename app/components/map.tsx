@@ -33,13 +33,6 @@ const Map: React.FC<MapProps> = () => {
 
     return (
         <MapGl
-            // globe
-            // initialViewState={{
-            //     longitude: 82.73392878639856,
-            //     latitude: 63.22686757599939,
-            //     zoom: 3.5447911120175033,
-            // }}
-            // mercator
             initialViewState={{
                 longitude: 96.73466789797476,
                 latitude: 68.28074443801353,

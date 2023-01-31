@@ -18,7 +18,7 @@
 { "type": "Feature", "properties": { "id": 13, "name": "Южный заряд", "city": "Южноуральск", "src": "/images/13.jpg" }, "geometry": { "type": "Point", "coordinates": [ 61.268228530898313, 54.442383828106401 ] } },
 { "type": "Feature", "properties": { "id": 14, "name": "Буйская стрелка", "city": "Буй", "src": "/images/14.jpg" }, "geometry": { "type": "Point", "coordinates": [ 41.529762126061286, 58.483193131147111 ] } },
 { "type": "Feature", "properties": { "id": 15, "name": "Золотой старт", "city": "Миасс", "src": "/images/15.jpg" }, "geometry": { "type": "Point", "coordinates": [ 60.097074705357308, 55.055761598664148 ] } },
-{ "type": "Feature", "properties": { "id": 16, "name": "Галерея скверов", "city": "Сатка", "src": null }, "geometry": { "type": "Point", "coordinates": [ 58.973597997995235, 55.046190072275614 ] } },
+{ "type": "Feature", "properties": { "id": 16, "name": "Галерея скверов", "city": "Сатка", "src": "/images/16.jpg" }, "geometry": { "type": "Point", "coordinates": [ 58.973597997995235, 55.046190072275614 ] } },
 { "type": "Feature", "properties": { "id": 17, "name": "Городские источники", "city": "Волгореченск", "src": "/images/17.jpg" }, "geometry": { "type": "Point", "coordinates": [ 41.154851454027678, 57.4410075289451 ] } },
 { "type": "Feature", "properties": { "id": 18, "name": "Река времени", "city": "Лобня", "src": null }, "geometry": { "type": "Point", "coordinates": [ 37.460330152250009, 56.010695667625512 ] } },
 { "type": "Feature", "properties": { "id": 19, "name": "Парк за кинотеатром «Амигос»", "city": "Озёры", "src": null }, "geometry": { "type": "Point", "coordinates": [ 38.534710340048704, 54.848259681546253 ] } },

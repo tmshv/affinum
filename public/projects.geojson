@@ -24,6 +24,6 @@
 { "type": "Feature", "properties": { "id": 19, "name": "Парк за кинотеатром «Амигос»", "city": "Озёры", "src": "/images/19.jpg" }, "geometry": { "type": "Point", "coordinates": [ 38.534710340048704, 54.848259681546253 ] } },
 { "type": "Feature", "properties": { "id": 22, "name": "Клин, звучи", "city": "Клин", "src": "/images/22.jpg" }, "geometry": { "type": "Point", "coordinates": [ 36.742867877895002, 56.331754046845049 ] } },
 { "type": "Feature", "properties": { "id": 21, "name": "Исток Невы", "city": "Шлиссельбург", "src": null }, "geometry": { "type": "Point", "coordinates": [ 31.030819293838295, 59.944538870959093 ] } },
-{ "type": "Feature", "properties": { "id": 20, "name": "Советская площадь", "city": "Дмитров", "src": null }, "geometry": { "type": "Point", "coordinates": [ 37.517690787677431, 56.343198430821424 ] } }
+{ "type": "Feature", "properties": { "id": 20, "name": "Советская площадь", "city": "Дмитров", "src": "/images/20.jpg" }, "geometry": { "type": "Point", "coordinates": [ 37.517690787677431, 56.343198430821424 ] } }
 ]
 }

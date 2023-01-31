@@ -1,4 +1,4 @@
-import type { LayerProps } from "react-map-gl";
+import type { LayerProps, LngLatBoundsLike } from "react-map-gl";
 import { Layer, Map as MapGl, Source } from "react-map-gl";
 import MapLayerHoverable from "./map-layer-hoverable";
 import MapPopup from "./map-popup";
@@ -27,6 +27,11 @@ const layerStyleCircle: LayerProps = {
 //     }
 // };
 
+const maxBounds: LngLatBoundsLike = [
+    [8.414178767074475, 28.939372626536084],
+    [196.44705902596996, 83.1613784193168],
+]
+
 export type MapProps = {
 }
 
@@ -47,10 +52,7 @@ const Map: React.FC<MapProps> = () => {
             mapStyle="mapbox://styles/tmshv/cld4aqnw8000e01qwdzz15s6s"
             mapboxAccessToken={mapboxAccessToken}
             minZoom={1}
-            maxBounds={[
-                [8.414178767074475, 28.939372626536084],
-                [196.44705902596996, 83.1613784193168],
-            ]}
+            maxBounds={maxBounds}
             projection={"mercator"}
         >
             <MapLayerHoverable />

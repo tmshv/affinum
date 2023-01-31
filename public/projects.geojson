@@ -11,7 +11,7 @@
 { "type": "Feature", "properties": { "id": 6, "name": "Ветер перемен", "city": "Баймак", "src": "/images/6.jpg" }, "geometry": { "type": "Point", "coordinates": [ 58.308194115456494, 52.597866163398848 ] } },
 { "type": "Feature", "properties": { "id": 7, "name": "Парусинка", "city": "Ивангород", "src": null }, "geometry": { "type": "Point", "coordinates": [ 28.202485635754876, 59.357647032316109 ] } },
 { "type": "Feature", "properties": { "id": 8, "name": "Раскрывая горизонты", "city": "Межгорье", "src": "/images/8.jpg" }, "geometry": { "type": "Point", "coordinates": [ 57.973494346227021, 54.241605176537085 ] } },
-{ "type": "Feature", "properties": { "id": 9, "name": "Цветущий берег", "city": "Мелеуз", "src": null }, "geometry": { "type": "Point", "coordinates": [ 55.920867647054195, 52.959165154719258 ] } },
+{ "type": "Feature", "properties": { "id": 9, "name": "Цветущий берег", "city": "Мелеуз", "src": "/images/9.jpg" }, "geometry": { "type": "Point", "coordinates": [ 55.920867647054195, 52.959165154719258 ] } },
 { "type": "Feature", "properties": { "id": 10, "name": "Свободный парк", "city": "Свободный", "src": "/images/10.jpg" }, "geometry": { "type": "Point", "coordinates": [ 128.134718099354757, 51.386209800559406 ] } },
 { "type": "Feature", "properties": { "id": 11, "name": "Медвежье Заонежье", "city": "Медвежьегорск", "src": "/images/11.jpg" }, "geometry": { "type": "Point", "coordinates": [ 34.484928460547941, 62.915577179901902 ] } },
 { "type": "Feature", "properties": { "id": 12, "name": "Город у синего озера", "city": "Галич", "src": "/images/12.jpg" }, "geometry": { "type": "Point", "coordinates": [ 42.347846010697971, 58.380756859410013 ] } },

@@ -8,7 +8,7 @@
 { "type": "Feature", "properties": { "id": 3, "name": "Тундровый сад", "city": "Мончегорск", "src": "/images/3.jpg" }, "geometry": { "type": "Point", "coordinates": [ 32.966866372943834, 67.945389367048477 ] } },
 { "type": "Feature", "properties": { "id": 4, "name": "Бира-парк", "city": "Биробиджан", "src": "/images/4.jpg" }, "geometry": { "type": "Point", "coordinates": [ 132.931663022062821, 48.783830299605192 ] } },
 { "type": "Feature", "properties": { "id": 5, "name": "Ткацкий двор", "city": "Нерехта", "src": "/images/5.jpg" }, "geometry": { "type": "Point", "coordinates": [ 40.582020437503942, 57.460326816408873 ] } },
-{ "type": "Feature", "properties": { "id": 6, "name": "Ветер перемен", "city": "Баймак", "src": null }, "geometry": { "type": "Point", "coordinates": [ 58.308194115456494, 52.597866163398848 ] } },
+{ "type": "Feature", "properties": { "id": 6, "name": "Ветер перемен", "city": "Баймак", "src": "/images/6.jpg" }, "geometry": { "type": "Point", "coordinates": [ 58.308194115456494, 52.597866163398848 ] } },
 { "type": "Feature", "properties": { "id": 8, "name": "Раскрывая горизонты", "city": "Межгорье", "src": "/images/8.jpg" }, "geometry": { "type": "Point", "coordinates": [ 57.973494346227021, 54.241605176537085 ] } },
 { "type": "Feature", "properties": { "id": 9, "name": "Цветущий берег", "city": "Мелеуз", "src": null }, "geometry": { "type": "Point", "coordinates": [ 55.920867647054195, 52.959165154719258 ] } },
 { "type": "Feature", "properties": { "id": 10, "name": "Свободный парк", "city": "Свободный", "src": "/images/10.jpg" }, "geometry": { "type": "Point", "coordinates": [ 128.134718099354757, 51.386209800559406 ] } },

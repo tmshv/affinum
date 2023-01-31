@@ -12,18 +12,18 @@ const layerStyleCircle: LayerProps = {
     }
 };
 
-const layerStyleSymbol: LayerProps = {
-    id: "project-id",
-    type: "symbol",
-    paint: {
-        "text-color": "#ffffff",
-    },
-    layout: {
-        "text-field": ["get", "id"],
-        "text-size": 10,
-        "text-allow-overlap": true,
-    }
-};
+// const layerStyleSymbol: LayerProps = {
+//     id: "project-id",
+//     type: "symbol",
+//     paint: {
+//         "text-color": "#ffffff",
+//     },
+//     layout: {
+//         "text-field": ["get", "id"],
+//         "text-size": 10,
+//         "text-allow-overlap": true,
+//     }
+// };
 
 export type MapProps = {
 }
@@ -54,7 +54,7 @@ const Map: React.FC<MapProps> = () => {
             <MapLayerHoverable />
             <Source id="projects" type="geojson" data="/projects.geojson">
                 <Layer {...layerStyleCircle} />
-                <Layer {...layerStyleSymbol} />
+                {/* <Layer {...layerStyleSymbol} /> */}
             </Source>
             <MapPopup />
         </MapGl>

@@ -7,8 +7,10 @@ const layerStyleCircle: LayerProps = {
     id: "project-circle",
     type: "circle",
     paint: {
-        "circle-radius": 8,
+        "circle-radius": 5,
         "circle-color": "#111111",
+        "circle-stroke-width": 2,
+        "circle-stroke-color": "#eeeeee",
     }
 };
 

@@ -15,7 +15,7 @@
 { "type": "Feature", "properties": { "id": 10, "name": "Свободный парк", "city": "Свободный", "src": "/images/10.jpg" }, "geometry": { "type": "Point", "coordinates": [ 128.134718099354757, 51.386209800559406 ] } },
 { "type": "Feature", "properties": { "id": 11, "name": "Медвежье Заонежье", "city": "Медвежьегорск", "src": "/images/11.jpg" }, "geometry": { "type": "Point", "coordinates": [ 34.484928460547941, 62.915577179901902 ] } },
 { "type": "Feature", "properties": { "id": 12, "name": "Город у синего озера", "city": "Галич", "src": "/images/12.jpg" }, "geometry": { "type": "Point", "coordinates": [ 42.347846010697971, 58.380756859410013 ] } },
-{ "type": "Feature", "properties": { "id": 13, "name": "Южный заряд", "city": "Южноуральск", "src": null }, "geometry": { "type": "Point", "coordinates": [ 61.268228530898313, 54.442383828106401 ] } },
+{ "type": "Feature", "properties": { "id": 13, "name": "Южный заряд", "city": "Южноуральск", "src": "/images/13.jpg" }, "geometry": { "type": "Point", "coordinates": [ 61.268228530898313, 54.442383828106401 ] } },
 { "type": "Feature", "properties": { "id": 14, "name": "Буйская стрелка", "city": "Буй", "src": "/images/14.jpg" }, "geometry": { "type": "Point", "coordinates": [ 41.529762126061286, 58.483193131147111 ] } },
 { "type": "Feature", "properties": { "id": 15, "name": "Золотой старт", "city": "Миасс", "src": null }, "geometry": { "type": "Point", "coordinates": [ 60.097074705357308, 55.055761598664148 ] } },
 { "type": "Feature", "properties": { "id": 16, "name": "Галерея скверов", "city": "Сатка", "src": null }, "geometry": { "type": "Point", "coordinates": [ 58.973597997995235, 55.046190072275614 ] } },

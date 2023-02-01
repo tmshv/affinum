@@ -14,18 +14,21 @@ const layerStyleCircle: LayerProps = {
     }
 };
 
-// const layerStyleSymbol: LayerProps = {
-//     id: "project-id",
-//     type: "symbol",
-//     paint: {
-//         "text-color": "#ffffff",
-//     },
-//     layout: {
-//         "text-field": ["get", "id"],
-//         "text-size": 10,
-//         "text-allow-overlap": true,
-//     }
-// };
+const layerStyleSymbol: LayerProps = {
+    id: "project-id",
+    type: "symbol",
+    paint: {
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 4,
+        "text-translate": [10, 0],
+    },
+    layout: {
+        "text-field": ["get", "city"],
+        "text-size": 10,
+        "text-anchor": "left",
+    },
+};
 
 const maxBounds: LngLatBoundsLike = [
     [8.414178767074475, 28.939372626536084],
@@ -58,7 +61,7 @@ const Map: React.FC<MapProps> = () => {
             <MapLayerHoverable />
             <Source id="projects" type="geojson" data="/projects.geojson">
                 <Layer {...layerStyleCircle} />
-                {/* <Layer {...layerStyleSymbol} /> */}
+                <Layer {...layerStyleSymbol} />
             </Source>
             <MapPopup />
         </MapGl>

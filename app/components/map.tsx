@@ -63,7 +63,9 @@ const Map: React.FC<MapProps> = () => {
                 <Layer {...layerStyleCircle} />
                 <Layer {...layerStyleSymbol} />
             </Source>
-            <MapPopup />
+            <MapPopup
+                layerName={"project-circle"}
+            />
         </MapGl>
     );
 }

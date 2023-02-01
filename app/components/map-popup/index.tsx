@@ -1,6 +1,6 @@
-import mapboxgl from "mapbox-gl";
 import { useEffect, useState } from "react";
 import { Popup, useMap } from "react-map-gl";
+import type { MapLayerMouseEvent } from "react-map-gl";
 import useMapPointer from "~/hooks/map-pointer";
 
 import styles from "./styles.css";
@@ -9,10 +9,6 @@ export const links = () => [
     { rel: "stylesheet", href: styles },
 ];
 
-async function nextTick(): Promise<void> {
-    return new Promise(resolve => setTimeout(resolve, 0))
-}
-
 type Info = {
     coord: GeoJSON.Position,
     title: string,
@@ -20,55 +16,48 @@ type Info = {
 };
 
 export type MapPopupProps = {
-
+    layerName: string
 }
 
-const MapPopup: React.FC<MapPopupProps> = () => {
+const MapPopup: React.FC<MapPopupProps> = ({ layerName }) => {
     const [info, setInfo] = useState<Info | null>(null);
     const { current } = useMap();
 
-    useMapPointer(["project-circle"]);
+    useMapPointer([layerName]);
 
     useEffect(() => {
         if (!current) {
             return
         }
         const map = current.getMap();
-        const cb = async (event: mapboxgl.MapMouseEvent) => {
-            // const coord = event.lngLat
-            const point = event.point
-
-            const map = event.target;
-            const fs = map.queryRenderedFeatures(point, {
-                layers: ["project-circle"],
-            })
-
-            if (fs.length === 0) {
-                setInfo(null);
+        const show = async (event: MapLayerMouseEvent) => {
+            if (event.features?.length === 0) {
                 return
             }
-
-            const feature = fs[0];
-            const geom = feature.geometry as GeoJSON.Point;
-
+            const feature = event.features![0]
             setInfo(null);
             if (!feature.properties) {
                 return;
             }
-            await nextTick();
+            const geom = feature.geometry as GeoJSON.Point;
             setInfo({
                 coord: geom.coordinates,
                 title: feature.properties.name,
                 src: feature.properties.src,
             });
         }
+        const clear = () => {
+            setInfo(null)
+        }
 
-        map.on("click", cb);
+        map.on("mouseover", layerName, show);
+        map.on("mouseleave", layerName, clear);
 
         return () => {
-            map.off("click", cb);
+            map.off("mouseover", layerName, show);
+            map.off("mouseleave", layerName, clear);
         }
-    }, [current]);
+    }, [current, layerName]);
 
     if (!info) {
         return null;

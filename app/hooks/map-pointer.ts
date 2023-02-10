@@ -22,8 +22,8 @@ export default function useMapPointer(layerIds: string[]) {
         map.on("mouseout", layerIds, out);
 
         return () => {
-            map.off("mouseover", over);
-            map.off("mouseout", out);
+            map.off("mouseover", layerIds, over);
+            map.off("mouseout", layerIds, out);
         }
     }, [current, layerIds]);
 }

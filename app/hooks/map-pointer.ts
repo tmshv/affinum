@@ -6,7 +6,7 @@ export default function useMapPointer(layerIds: string[]) {
 
     useEffect(() => {
         const map = current?.getMap();
-        if(!map) {
+        if (!map) {
             return;
         }
         const over = async () => {

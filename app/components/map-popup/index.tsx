@@ -11,7 +11,10 @@ export const links = () => [
 
 type Info = {
     coord: GeoJSON.Position,
-    title: string,
+    location: string,
+    year: number,
+    name: string,
+    caption: string,
     src: string,
 };
 
@@ -42,7 +45,10 @@ const MapPopup: React.FC<MapPopupProps> = ({ layerName }) => {
             const geom = feature.geometry as GeoJSON.Point;
             setInfo({
                 coord: geom.coordinates,
-                title: feature.properties.name,
+                name: feature.properties.name,
+                year: feature.properties.year,
+                location: feature.properties.location,
+                caption: feature.properties.caption ?? "Концепция развития городского парка",
                 src: feature.properties.src,
             });
         }
@@ -71,10 +77,18 @@ const MapPopup: React.FC<MapPopupProps> = ({ layerName }) => {
             onClose={() => setInfo(null)}
         >
             {!info.src ? null : (
-                <img className="cover" src={info.src} alt={"1"} width={100} height={100} />
+                <img
+                    className="cover"
+                    src={info.src}
+                    alt={"1"}
+                    width={100}
+                    height={100}
+                />
             )}
             <div className="caption">
-                {info.title}
+                <p className="text">{info.location}</p>
+                    <p className="text">{info.name}, {info.year} год</p>
+                <p className="text">{info.caption}</p>
             </div>
         </Popup>
     );

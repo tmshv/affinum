@@ -5,6 +5,15 @@ import useMapPointer from "~/hooks/map-pointer";
 
 import styles from "./styles.css";
 
+function quotes(value: string): string {
+    const close = '»'
+    // skip close quote if it is already in the string
+    if (value.charAt(value.length - 1) === close) {
+        return `«${value}`
+    }
+    return `«${value}»`
+}
+
 export const links = () => [
     { rel: "stylesheet", href: styles },
 ];
@@ -89,7 +98,7 @@ const MapPopup: React.FC<MapPopupProps> = ({ layerName }) => {
             )}
             <div className="caption">
                 <p className="text">{info.state}, {info.city}</p>
-                    <p className="text">{info.name}, {info.year} год</p>
+                <p className="text">{quotes(info.name)}, {info.year} год</p>
                 <p className="text">{info.caption}</p>
             </div>
         </Popup>

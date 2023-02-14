@@ -59,7 +59,7 @@ const MapPopup: React.FC<MapPopupProps> = ({ layerName }) => {
                 year: feature.properties.year,
                 state: feature.properties.state,
                 city: feature.properties.city,
-                caption: feature.properties.caption ?? "Концепция развития городского парка",
+                caption: feature.properties.caption,
                 src: feature.properties.src,
             });
         }

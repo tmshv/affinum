@@ -14,6 +14,11 @@ function quotes(value: string): string {
     return `«${value}»`
 }
 
+function location(state: string, city: string): string {
+    const nbsp = "\u00A0"
+    return `${state}, г.${nbsp}${city}`
+}
+
 export const links = () => [
     { rel: "stylesheet", href: styles },
 ];
@@ -97,7 +102,7 @@ const MapPopup: React.FC<MapPopupProps> = ({ layerName }) => {
                 />
             )}
             <div className="caption">
-                <p className="text">{info.state}, {info.city}</p>
+                <p className="text">{location(info.state, info.city)}</p>
                 <p className="text">{quotes(info.name)}, {info.year} год</p>
                 <p className="text">{info.caption}</p>
             </div>

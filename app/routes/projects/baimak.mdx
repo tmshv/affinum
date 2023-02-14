@@ -6,10 +6,15 @@ headers:
   Cache-Control: no-cache
 ---
 
+import styles from "~/styles/index.css";
 import Hero, { links as heroLinks } from "~/components/hero"
 
 export function links() {
     return [
+        {
+            rel: "stylesheet",
+            href: styles,
+        },
         ...heroLinks(),
     ];
 }
@@ -28,6 +33,10 @@ export function links() {
     благоустроены и включены в ансамбль площади. Авто­мобили займут места по периметру пространства вдоль проездов так, чтобы не мешать пешеходам. За зданием
     администрации будет разбит городской сад.
 </Hero>
+
+## Существующее положение
+
+## Проектное предложение
 
 ## Архитектурные принципы планируемых изменений
 

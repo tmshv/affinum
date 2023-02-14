@@ -1,15 +1,66 @@
+@font-face {
+    font-family: "Aeroport";
+    font-display: swap;
+	/* src: url("/assets/fonts/shadow-font/Shadow-regular.eot"); */
+	src: url("/assets/fonts/Aeroport-regular.woff") format("woff"),
+         url("/assets/fonts/Aeroport-regular.otf") format("opentype"),
+         url("/assets/fonts/Aeroport-regular.svg") format("svg");
+}
+
+@font-face {
+    font-family: "Aeroport Mono";
+    font-display: swap;
+	/* src: url("/assets/fonts/shadow-font/Shadow-regular.eot"); */
+	src: url("/assets/fonts/Aeroport-monospaced.woff") format("woff"),
+         url("/assets/fonts/Aeroport-monospaced.otf") format("opentype"),
+         url("/assets/fonts/Aeroport-monospaced.svg") format("svg");
+}
+
 .hero {
     position: relative;
+
+    font-family: "Aeroport Mono", Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 32px;
 }
 
 .hero .content {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    right: 0;
+    bottom: 0;
 
     color: white;
+
+    padding: 32px 64px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.hero .caption {
+    font-family: Aeroport, Arial, Helvetica, sans-serif;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    text-align: justify;
+
+    max-width: 550px;
+}
+
+.hero h1 {
+    /* font-family: "Aeroport Mono", Arial, Helvetica, sans-serif; */
+    /* font-style: normal; */
+    /* font-weight: 400; */
+    font-size: 64px;
+    /* line-height: 87px; */
+
+    margin: 32px 0px;
 }
 
 .cover {
@@ -23,4 +74,32 @@
     width: 100%;
     display: flex;
     align-items: center;
+
+    font-size: 24px;
+
+    margin-bottom: 32px;
 }
+
+.hero .number {
+    font-family: 'Aeroport Mono';
+    font-style: normal;
+    font-weight: 400;
+
+    font-size: 20px;
+}
+
+.hero .number .value {
+    font-size: 100px;
+    line-height: 120px;
+}
+
+.hero .flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.hero .flex-column {
+    display: flex;
+    flex-direction: column;
+}
+

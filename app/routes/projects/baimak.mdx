@@ -7,6 +7,7 @@ headers:
 ---
 
 import styles from "~/styles/index.css";
+import projectStyles from "~/styles/project.css";
 import Hero, { links as heroLinks } from "~/components/hero"
 
 export function links() {
@@ -15,6 +16,10 @@ export function links() {
             rel: "stylesheet",
             href: styles,
         },
+        {
+            rel: "stylesheet",
+            href: projectStyles,
+        },
         ...heroLinks(),
     ];
 }
@@ -22,7 +27,7 @@ export function links() {
 <Hero
     title={"«Ветер перемен»"}
     location={"Баймак"}
-    src={"/assets/hero-baimak.jpg"}
+    src={"/assets/baimak-hero.jpg"}
     area={"41 га"}
     budget={"85,5 млн"}
 >
@@ -34,12 +39,23 @@ export function links() {
     администрации будет разбит городской сад.
 </Hero>
 
+## Объемно-пространственное решение
+
+![](/assets/baimak-00.jpg)
+
 ## Существующее положение
+
+![](/assets/baimak-01.jpg)
 
 ## Проектное предложение
 
-## Архитектурные принципы планируемых изменений
+![](/assets/baimak-02.jpg)
 
-## Объемно-пространственное решение
+## Рабочая документация
 
-## Малые архитектурные формы
+![](/assets/baimak-03.jpg)
+
+## Процесс реализации
+
+![](/assets/baimak-04.jpg)
+

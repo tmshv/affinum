@@ -8,6 +8,13 @@
     line-height: 32px;
 }
 
+.wide {
+    position: relative;
+    width: 100vw;
+    margin-left: -50vw;
+    left: 50%;
+}
+
 .hero .content {
     position: absolute;
     top: 0;

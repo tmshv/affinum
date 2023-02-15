@@ -27,7 +27,9 @@ export type HeroProps = {
 
 const Hero: React.FC<HeroProps> = ({ location, title, children, src, area, budget }) => {
     return (
-        <section className="hero">
+        <section className="hero wide" style={{
+            marginBottom: 64,
+        }}>
             <img
                 className="cover"
                 src={src}

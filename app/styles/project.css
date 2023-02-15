@@ -1,7 +1,10 @@
-/* h1 { */
-/*     font-size: 100px; */
-/* } */
+article {
+    --padding: 64px;
+    position: relative;
+    padding: 0 var(--padding) var(--padding);
+}
 
-/* p { */
-/*     background-color: lime; */
-/* } */
+article img {
+    width: 100%;
+    height: auto;
+}

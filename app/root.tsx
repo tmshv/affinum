@@ -33,6 +33,8 @@ export default function App() {
             <head>
                 <Meta />
                 <Links />
+
+                <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
             </head>
             <body>
                 <Outlet />

@@ -3,6 +3,7 @@ import mapboxStyles from "mapbox-gl/dist/mapbox-gl.css";
 import styles from "~/styles/index.css";
 import mapboxCustomStyles from "~/styles/mapbox.css";
 import { links as popupStyles } from "~/components/map-popup";
+import { links as projectStyles } from "~/components/project";
 
 import AffinumOverlay from "~/components/affinum-overlay";
 import { lazy, Suspense } from "react";
@@ -25,6 +26,7 @@ export function links() {
             href: mapboxCustomStyles,
         },
         ...popupStyles(),
+        ...projectStyles(),
     ];
 }
 

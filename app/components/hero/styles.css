@@ -1,0 +1,95 @@
+.hero {
+    position: relative;
+
+    font-family: "Aeroport Mono", Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 32px;
+}
+
+.wide {
+    position: relative;
+    width: 100vw;
+    margin-left: -50vw;
+    left: 50%;
+}
+
+.hero .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+
+    padding: 32px 64px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.hero .caption {
+    font-family: Aeroport, Arial, Helvetica, sans-serif;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    text-align: justify;
+
+    max-width: 550px;
+
+    padding-right: 32px;
+}
+
+.hero h1 {
+    /* font-family: "Aeroport Mono", Arial, Helvetica, sans-serif; */
+    /* font-style: normal; */
+    /* font-weight: 400; */
+    font-size: 64px;
+    /* line-height: 87px; */
+
+    margin: 32px 0px;
+}
+
+.cover {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.logo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    font-size: 24px;
+
+    margin-bottom: 32px;
+}
+
+.hero .number {
+    font-family: 'Aeroport Mono';
+    font-style: normal;
+    font-weight: 400;
+
+    font-size: 20px;
+}
+
+.hero .number .value {
+    font-size: 100px;
+    line-height: 120px;
+}
+
+.hero .flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.hero .flex-column {
+    display: flex;
+    flex-direction: column;
+}
+

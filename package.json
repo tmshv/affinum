@@ -7,19 +7,21 @@
         "typecheck": "tsc"
     },
     "dependencies": {
-        "@remix-run/node": "^1.12.0",
-        "@remix-run/react": "^1.12.0",
-        "@remix-run/vercel": "^1.12.0",
+        "@remix-run/node": "^1.13.0",
+        "@remix-run/react": "^1.13.0",
+        "@remix-run/vercel": "^1.13.0",
         "@vercel/node": "^2.9.0",
+        "front-matter": "^4.0.2",
         "mapbox-gl": "^2.12.0",
+        "mdx-bundler": "^9.2.1",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "react-map-gl": "^7.0.21"
     },
     "devDependencies": {
-        "@remix-run/dev": "^1.12.0",
-        "@remix-run/eslint-config": "^1.12.0",
-        "@remix-run/serve": "^1.12.0",
+        "@remix-run/dev": "^1.13.0",
+        "@remix-run/eslint-config": "^1.13.0",
+        "@remix-run/serve": "^1.13.0",
         "@types/react": "^18.0.25",
         "@types/react-dom": "^18.0.8",
         "eslint": "^8.33.0",

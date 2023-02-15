@@ -1,0 +1,12 @@
+article {
+    --padding: 64px;
+    position: relative;
+    padding: 0 var(--padding) var(--padding);
+}
+
+article > img {
+    width: 100%;
+    height: auto;
+
+    margin-bottom: var(--padding);
+}

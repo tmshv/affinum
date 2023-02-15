@@ -4,7 +4,9 @@ article {
     padding: 0 var(--padding) var(--padding);
 }
 
-article img {
+article > img {
     width: 100%;
     height: auto;
+
+    margin-bottom: var(--padding);
 }

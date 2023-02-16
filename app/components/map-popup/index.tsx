@@ -91,6 +91,8 @@ const MapPopup: React.FC<MapPopupProps> = ({ layerName }) => {
             latitude={info.coord[1]}
             anchor="bottom"
             onClose={() => setInfo(null)}
+            closeButton={false}
+            className={"my-popup"}
         >
             {!info.src ? null : (
                 <img
@@ -102,8 +104,8 @@ const MapPopup: React.FC<MapPopupProps> = ({ layerName }) => {
                 />
             )}
             <div className="caption">
-                <p className="text">{location(info.state, info.city)}</p>
-                <p className="text">{quotes(info.name)}, {info.year} год</p>
+                <p className="caption-head">{quotes(info.name)}</p>
+                <p className="text">{location(info.state, info.city)}, {info.year} г.</p>
                 <p className="text">{info.caption}</p>
             </div>
         </Popup>

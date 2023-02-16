@@ -4,7 +4,7 @@ import { useMap } from "react-map-gl";
 
 export type MapClickCallback = (event: MapLayerMouseEvent) => void
 
-export default function useMapClick(layerName: string, callback: MapClickCallback) {
+export function useMapLayerClick(layerName: string, callback: MapClickCallback) {
     const { current } = useMap();
 
     useEffect(() => {
@@ -19,5 +19,21 @@ export default function useMapClick(layerName: string, callback: MapClickCallbac
             map.off("click", layerName, callback);
         }
     }, [callback, current, layerName]);
+}
 
+export function useMapClick(callback: MapClickCallback) {
+    const { current } = useMap();
+
+    useEffect(() => {
+        if (!current) {
+            return
+        }
+        const map = current.getMap();
+
+        map.on("click", callback);
+
+        return () => {
+            map.off("click", callback);
+        }
+    }, [callback, current]);
 }

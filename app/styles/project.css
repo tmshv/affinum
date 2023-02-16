@@ -1,5 +1,5 @@
 article {
-    --padding: 64px;
+    --padding: 32px;
     position: relative;
     padding: 0 var(--padding) var(--padding);
 }

@@ -1,4 +1,5 @@
 .hero {
+    --padding: 32px;
     position: relative;
 
     font-family: "Aeroport Mono", Arial, Helvetica, sans-serif;
@@ -22,8 +23,7 @@
     right: 0;
     bottom: 0;
 
-
-    padding: 32px 64px;
+    padding: 32px var(--padding);
 
     display: flex;
     flex-direction: column;
@@ -47,10 +47,10 @@
     /* font-family: "Aeroport Mono", Arial, Helvetica, sans-serif; */
     /* font-style: normal; */
     /* font-weight: 400; */
-    font-size: 64px;
-    /* line-height: 87px; */
+    font-size: 48px;
+    line-height: 48px;
 
-    margin: 32px 0px;
+    margin: 16px 0px;
 }
 
 .cover {
@@ -79,8 +79,8 @@
 }
 
 .hero .number .value {
-    font-size: 100px;
-    line-height: 120px;
+    font-size: 64px;
+    line-height: 72px;
 }
 
 .hero .flex-row {
@@ -88,8 +88,39 @@
     flex-direction: row;
 }
 
+.hero .flex-end {
+    align-items: flex-end;
+}
 .hero .flex-column {
     display: flex;
     flex-direction: column;
 }
 
+@media screen and (max-width: 1200px) {
+    .hero .caption {
+        max-width: 500px;
+    }
+
+    .hero .number .value {
+        font-size: 72px;
+        line-height: 80px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .hero .caption {
+        font-size: 16px;
+        line-height: 20px;
+
+        max-width: 400px;
+    }
+
+    .hero .number {
+        /* font-size: 20px; */
+    }
+
+    .hero .number .value {
+        font-size: 48px;
+        line-height: 72px;
+    }
+}

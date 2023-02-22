@@ -1,5 +1,7 @@
 .hero {
     --padding: 20px;
+    --caption-min-width: 450px;
+
     position: relative;
     padding: 0 (--padding);
     display: flex;
@@ -9,8 +11,8 @@
     font-family: "Aeroport Mono", Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 32px;
-    line-height: 32px;
+    /* font-size: 32px; */
+    /* line-height: 32px; */
 }
 
 .hero .flex-row {
@@ -26,12 +28,12 @@
 }
 
 .hero .caption {
-    font-size: 20px;
-    line-height: 27px;
+    /* font-size: 20px; */
+    /* line-height: 27px; */
     text-align: justify;
 
     flex: 1;
-    min-width: 550px;
+    min-width: var(--caption-min-width);
 
     padding-right: var(--md);
 }
@@ -41,31 +43,31 @@
     font-style: normal;
     font-weight: 400;
 
-    font-size: 20px;
+    /* font-size: 20px; */
 }
 
 .hero .number .value {
-    font-size: 64px;
-    line-height: 72px;
+    font-size: 48px;
+    line-height: 56px;
 }
 
 @media screen and (max-width: 1200px) {
     .hero .caption {
-        max-width: 500px;
+        /* max-width: 500px; */
     }
 
     .hero .number .value {
-        font-size: 72px;
-        line-height: 80px;
+        /* font-size: 72px; */
+        /* line-height: 80px; */
     }
 }
 
 @media screen and (max-width: 800px) {
     .hero .caption {
-        font-size: 16px;
-        line-height: 20px;
+        /* font-size: 16px; */
+        /* line-height: 20px; */
 
-        max-width: 400px;
+        /* max-width: 400px; */
     }
 
     .hero .number {
@@ -73,7 +75,7 @@
     }
 
     .hero .number .value {
-        font-size: 48px;
-        line-height: 72px;
+        /* font-size: 48px; */
+        /* line-height: 72px; */
     }
 }

@@ -5,10 +5,13 @@ import { useMemo } from "react";
 import { getPost } from "~/lib/api";
 import { Link, useLoaderData } from "@remix-run/react";
 import Hero from "~/components/hero"
+import AffinumLogo from "~/components/affinum-logo";
+import Wide from "~/components/wide";
 
 import styles from "~/styles/index.css";
 import projectStyles from "~/styles/project.css";
 import { links as heroLinks } from "~/components/hero"
+import { links as wideLinks } from "~/components/wide"
 
 export function links() {
     return [
@@ -21,6 +24,7 @@ export function links() {
             href: projectStyles,
         },
         ...heroLinks(),
+        ...wideLinks(),
     ];
 }
 
@@ -84,6 +88,8 @@ export default function Post() {
             <article>
                 <Component components={{
                     Hero,
+                    Wide,
+                    AffinumLogo,
                     p: Paragraph,
                 }} />
             </article>

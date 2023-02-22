@@ -1,12 +1,24 @@
 article {
-    --padding: 32px;
+    --sx: 20px;
+    --md: 36px;
     position: relative;
-    padding: 0 var(--padding) var(--padding);
+    padding: 24px var(--md);
 }
 
-article > img {
+article img {
     width: 100%;
     height: auto;
 
-    margin-bottom: var(--padding);
+    margin-bottom: var(--sx);
 }
+
+article h1 {
+    /* font-family: "Aeroport Mono", Arial, Helvetica, sans-serif; */
+    /* font-style: normal; */
+    /* font-weight: 400; */
+    font-size: 48px;
+    line-height: 48px;
+
+    margin: var(--sx) 0px;
+}
+

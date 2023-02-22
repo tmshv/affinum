@@ -13,7 +13,7 @@ export type HeroProps = {
 
 const Hero: React.FC<HeroProps> = ({ children, area, budget, color = "black" }) => {
     return (
-        <section className="hero flex-row" style={{
+        <section className="hero" style={{
             marginBottom: 64,
             color,
         }}>
@@ -21,9 +21,7 @@ const Hero: React.FC<HeroProps> = ({ children, area, budget, color = "black" }) 
                 {children}
             </div>
 
-            <div style={{ flex: 1 }} />
-
-            <div className="flex-column">
+            <div className="values">
                 <div className="number">
                     <div className="value">
                         {area}
@@ -38,8 +36,6 @@ const Hero: React.FC<HeroProps> = ({ children, area, budget, color = "black" }) 
                     бюджет проекта
                 </div>
             </div>
-
-            <div style={{ flex: 1 }} />
         </section>
     );
 }

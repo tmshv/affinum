@@ -16,7 +16,7 @@ const layerStyleCircle: LayerProps = {
 };
 
 const layerStyleSymbol: LayerProps = {
-    id: "project-id",
+    id: "place-name",
     type: "symbol",
     paint: {
         "text-color": "#000000",
@@ -25,7 +25,7 @@ const layerStyleSymbol: LayerProps = {
         "text-translate": [10, 0],
     },
     layout: {
-        "text-field": ["get", "city"],
+        "text-field": ["get", "name"],
         "text-size": 10,
         "text-anchor": "left",
     },
@@ -62,6 +62,8 @@ const Map: React.FC<MapProps> = () => {
             <MapLayerHoverable />
             <Source id="projects" type="geojson" data="/projects.geojson">
                 <Layer {...layerStyleCircle} />
+            </Source>
+            <Source id="places" type="geojson" data="/places.geojson">
                 <Layer {...layerStyleSymbol} />
             </Source>
             <MapPopup

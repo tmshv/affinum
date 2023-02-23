@@ -45,9 +45,9 @@ const Map: React.FC<MapProps> = () => {
     return (
         <MapGl
             initialViewState={{
-                longitude: 96.73466789797476,
-                latitude: 68.28074443801353,
-                zoom: 2.012179390339392,
+                longitude: 96.734667,
+                latitude: 68.280744,
+                zoom: 2.012179,
             }}
             style={{
                 width: "100%",

@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { Popup, useMap } from "react-map-gl";
-import type { MapLayerMouseEvent } from "react-map-gl";
+import { useMap } from "react-map-gl";
+import PopupWithStyle from "./popup-with-style";
 import useMapPointer from "~/hooks/map-pointer";
+import type { MapLayerMouseEvent } from "react-map-gl";
 
 import styles from "./styles.css";
 
@@ -22,6 +23,10 @@ function location(state: string, city: string): string {
 export const links = () => [
     { rel: "stylesheet", href: styles },
 ];
+
+const style: React.CSSProperties = {
+    maxWidth: 250,
+}
 
 type Info = {
     coord: GeoJSON.Position,
@@ -86,29 +91,32 @@ const MapPopup: React.FC<MapPopupProps> = ({ layerName }) => {
     }
 
     return (
-        <Popup
+        <PopupWithStyle
             longitude={info.coord[0]}
             latitude={info.coord[1]}
             anchor="bottom"
-            onClose={() => setInfo(null)}
+            onClose={() => {
+                console.log("called popup onClose")
+                setInfo(null)
+            }}
+            // closeOnClick={false}
             closeButton={false}
             className={"my-popup"}
+            style={style}
         >
-            {!info.src ? null : (
-                <img
-                    className="cover"
-                    src={info.src}
-                    alt={"1"}
-                    width={100}
-                    height={100}
-                />
-            )}
+            <img
+                className="cover"
+                src={info.src}
+                alt={"1"}
+                width={100}
+                height={100}
+            />
             <div className="caption">
                 <p className="caption-head">{quotes(info.name)}</p>
                 <p className="text">{location(info.state, info.city)}, {info.year} г.</p>
                 <p className="text">{info.caption}</p>
             </div>
-        </Popup>
+        </PopupWithStyle>
     );
 }
 

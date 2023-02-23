@@ -20,6 +20,14 @@ function location(state: string, city: string): string {
     return `${state}, г.${nbsp}${city}`
 }
 
+function splitCaption(text: string): [string, string] {
+    const xs = text.split("\n\n")
+    if (xs.length === 1) {
+        return [text, ""]
+    }
+    return xs as [string, string]
+}
+
 export const links = () => [
     { rel: "stylesheet", href: styles },
 ];
@@ -36,6 +44,7 @@ type Info = {
     name: string,
     caption: string,
     src: string,
+    extra: string
 };
 
 export type MapPopupProps = {
@@ -63,14 +72,16 @@ const MapPopup: React.FC<MapPopupProps> = ({ layerName }) => {
                 return;
             }
             const geom = feature.geometry as GeoJSON.Point;
+            const [caption, extra] = splitCaption(feature.properties.caption)
             setInfo({
                 coord: geom.coordinates,
                 name: feature.properties.name,
                 year: feature.properties.year,
                 state: feature.properties.state,
                 city: feature.properties.city,
-                caption: feature.properties.caption,
                 src: feature.properties.src,
+                caption,
+                extra,
             });
         }
         const clear = () => {
@@ -113,8 +124,11 @@ const MapPopup: React.FC<MapPopupProps> = ({ layerName }) => {
             />
             <div className="caption">
                 <p className="caption-head">{quotes(info.name)}</p>
-                <p className="text">{location(info.state, info.city)}, {info.year} г.</p>
+                <p className="text">{location(info.state, info.city)}</p>
                 <p className="text">{info.caption}</p>
+                {!info.extra ? null : (
+                    <p className="caption-footer">{info.extra}</p>
+                )}
             </div>
         </PopupWithStyle>
     );

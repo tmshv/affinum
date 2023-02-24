@@ -26,11 +26,6 @@ const style: React.CSSProperties = {
     display: "flex",
     alignItems: "center",
     height: 10,
-    // width: 100%;
-    // display: flex;
-    // align-items: center;
-    // font-size: 24px;
-    // margin-bottom: 32px;
 }
 
 export type AffinumLogoProps = {

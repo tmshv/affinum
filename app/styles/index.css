@@ -1,19 +1,15 @@
 @font-face {
     font-family: "Aeroport";
     font-display: swap;
-	/* src: url("/assets/fonts/shadow-font/Shadow-regular.eot"); */
-	src: url("/assets/fonts/Aeroport-regular.woff") format("woff"),
-         url("/assets/fonts/Aeroport-regular.otf") format("opentype"),
-         url("/assets/fonts/Aeroport-regular.svg") format("svg");
+	src: url("/assets/fonts/Aeroport-regular.otf") format("opentype"),
+         url("/assets/fonts/Aeroport-regular.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "Aeroport Mono";
     font-display: swap;
-	/* src: url("/assets/fonts/shadow-font/Shadow-regular.eot"); */
-	src: url("/assets/fonts/Aeroport-monospaced.woff") format("woff"),
-         url("/assets/fonts/Aeroport-monospaced.otf") format("opentype"),
-         url("/assets/fonts/Aeroport-monospaced.svg") format("svg");
+	src: url("/assets/fonts/Aeroport-monospaced.otf") format("opentype"),
+         url("/assets/fonts/Aeroport-monospaced.ttf") format("truetype");
 }
 
 body {

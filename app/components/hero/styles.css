@@ -9,10 +9,6 @@
     column-gap: var(--padding);
 
     margin-top: 32px;
-
-    font-family: "Aeroport Mono", Arial, Helvetica, sans-serif;
-    font-style: normal;
-    font-weight: 400;
 }
 
 .hero .values {
@@ -23,18 +19,11 @@
 }
 
 .hero .caption {
-    /* font-size: 20px; */
-    /* line-height: 27px; */
     text-align: justify;
-
-    /* flex: 1; */
-    /* min-width: var(--caption-min-width); */
-
-    /* padding-right: var(--md); */
 }
 
 .hero .number {
-    font-family: 'Aeroport Mono';
+    font-family: "Aeroport Mono", Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 400;
 }

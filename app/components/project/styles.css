@@ -14,3 +14,10 @@
     border: none;
 }
 
+@media screen and (max-width: 500px) {
+    .project-body {
+        /* todo: use 100% after adding close button */
+        width: 90%;
+        min-width: 90%;
+    }
+}

@@ -15,6 +15,39 @@ const layerStyleCircle: LayerProps = {
     }
 };
 
+const layerStyleFill: LayerProps = {
+    id: "project-fill",
+    type: "fill",
+    paint: {
+        "fill-color": "#ee1111",
+        "fill-opacity": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            12, 0,
+            13, 0.35,
+        ],
+    },
+    minzoom: 12,
+};
+
+const layerStyleLine: LayerProps = {
+    id: "project-line",
+    type: "line",
+    paint: {
+        "line-color": "#ee1111",
+        "line-width": 1,
+        "line-opacity": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            12, 0,
+            13, 1,
+        ],
+    },
+    minzoom: 12,
+};
+
 const layerStyleSymbol: LayerProps = {
     id: "place-name",
     type: "symbol",
@@ -60,6 +93,10 @@ const Map: React.FC<MapProps> = () => {
             projection={"mercator"}
         >
             <MapLayerHoverable />
+            <Source id="project-boundaries" type="geojson" data="/boundaries.geojson">
+                <Layer {...layerStyleFill} />
+                <Layer {...layerStyleLine} />
+            </Source>
             <Source id="projects" type="geojson" data="/projects.geojson">
                 <Layer {...layerStyleCircle} />
             </Source>

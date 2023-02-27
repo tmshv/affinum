@@ -20,6 +20,8 @@
 
 .hero .caption {
     text-align: left;
+    hyphens: auto; /* manual: use &shy; for breaks */
+
     max-width: 550px;
 }
 

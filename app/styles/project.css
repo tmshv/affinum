@@ -23,6 +23,14 @@ article h1 {
     margin: var(--sx) 0px;
 }
 
+article h2 {
+    font-family: "Aeroport Mono", Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+
+    font-size: 1.5em;
+}
+
 @media screen and (max-width: 800px) {
     article {
         --sx: 10px;

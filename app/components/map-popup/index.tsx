@@ -33,7 +33,7 @@ export const links = () => [
 ];
 
 const style: React.CSSProperties = {
-    maxWidth: 320,
+    maxWidth: 300,
 }
 
 type Info = {

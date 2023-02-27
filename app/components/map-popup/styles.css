@@ -15,6 +15,7 @@
 
     width: 100%;
     height: auto;
+    aspect-ratio: 10/12;
     object-fit: cover;
 
     border-radius: 12px;

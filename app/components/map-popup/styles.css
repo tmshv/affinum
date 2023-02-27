@@ -21,6 +21,11 @@
 }
 
 .caption-head {
+    font-family: "Aeroport Mono", Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+
+    font-size: 1.5em;
     font-size: 20px;
     line-height: 24px;
     padding: 12px 0; /* not 16px because font height are bad */
@@ -28,6 +33,10 @@
 }
 
 .caption-footer {
+    font-family: "Aeroport", Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+
     font-size: 8px;
     line-height: 12px;
     padding: 12px 0 0; /* not 16px because font height are bad */
@@ -35,6 +44,12 @@
 }
 
 .text {
+    font-family: "Aeroport", Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+
+    font-size: 12px;
+    line-height: 16px;
     padding: 0;
     margin: 0;
 }

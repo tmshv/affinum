@@ -41,7 +41,7 @@
         grid-template-columns: 1fr;
     }
 
-    .hero .values {
-        flex-direction: row;
-    }
+    /* .hero .values { */
+    /*     flex-direction: row; */
+    /* } */
 }

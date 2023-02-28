@@ -1,5 +1,6 @@
 import { json } from "@remix-run/node";
 import type { MetaFunction } from "@remix-run/node";
+import { YMInitializer } from "react-yandex-metrika";
 
 import {
     Links,
@@ -35,6 +36,10 @@ export default function App() {
                 <Links />
 
                 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+                <YMInitializer accounts={[ 92606872 ]} options={{
+                    defer: true,
+                }} />
             </head>
             <body>
                 <Outlet />

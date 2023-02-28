@@ -16,7 +16,8 @@
         "mdx-bundler": "^9.2.1",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
-        "react-map-gl": "^7.0.21"
+        "react-map-gl": "^7.0.21",
+        "react-yandex-metrika": "^2.6.0"
     },
     "devDependencies": {
         "@remix-run/dev": "^1.13.0",

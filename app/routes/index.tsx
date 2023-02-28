@@ -8,6 +8,7 @@ import { links as projectStyles } from "~/components/project";
 import AffinumOverlay from "~/components/affinum-overlay";
 import { lazy, Suspense } from "react";
 import ClientOnly from "~/components/client-only";
+import { Outlet } from "@remix-run/react";
 
 let Map = lazy(() => import("~/components/map"));
 
@@ -39,6 +40,7 @@ export default function Index() {
                 </Suspense>
             </ClientOnly>
             <AffinumOverlay/>
+            <Outlet />
         </>
     );
 }

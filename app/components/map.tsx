@@ -1,8 +1,7 @@
-import type { LayerProps, LngLatBoundsLike } from "react-map-gl";
+import type { LayerProps } from "react-map-gl";
 import { Layer, Map as MapGl, Source } from "react-map-gl";
 import MapLayerHoverable from "./map-layer-hoverable";
 import MapPopup from "./map-popup";
-import Project from "./project";
 
 const layerStyleCircle: LayerProps = {
     id: "project-circle",
@@ -104,9 +103,6 @@ const Map: React.FC<MapProps> = () => {
                 <Layer {...layerStyleSymbol} />
             </Source>
             <MapPopup
-                layerName={"project-circle"}
-            />
-            <Project
                 layerName={"project-circle"}
             />
         </MapGl>

@@ -6,12 +6,17 @@ export const links = () => [
 
 export type WideProps = {
     children: React.ReactNode
+    ar?: React.CSSProperties["aspectRatio"]
 }
 
-const Wide: React.FC<WideProps> = ({ children }) => {
+const Wide: React.FC<WideProps> = ({ children, ar }) => {
     return (
-        <section className="wide">
-            {children}
+        <section className="wide" style={{
+            aspectRatio: ar,
+        }}>
+            <div className="wide-content">
+                {children}
+            </div>
         </section>
     );
 }

@@ -5,6 +5,7 @@ import useMapPointer from "~/hooks/map-pointer";
 import type { MapLayerMouseEvent } from "react-map-gl";
 
 import styles from "./styles.css";
+import useProjectClick from "~/hooks/use-project-click";
 
 function quotes(value: string): string {
     const close = '»'
@@ -56,6 +57,7 @@ const MapPopup: React.FC<MapPopupProps> = ({ layerName }) => {
     const { current } = useMap();
 
     useMapPointer([layerName]);
+    useProjectClick(layerName); // todo: move this out or this component
 
     useEffect(() => {
         if (!current) {

@@ -1,5 +1,4 @@
 import { links as popupStyles } from "~/components/map-popup";
-import { links as projectStyles } from "~/components/project";
 
 import AffinumOverlay from "~/components/affinum-overlay";
 import { lazy, Suspense } from "react";
@@ -10,7 +9,6 @@ let Map = lazy(() => import("~/components/map"));
 export function links() {
     return [
         ...popupStyles(),
-        ...projectStyles(),
     ];
 }
 

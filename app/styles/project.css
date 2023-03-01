@@ -50,3 +50,13 @@ article h2 {
         line-height: 42px;
     }
 }
+
+/* mobile  */
+@media screen and (max-width: 500px) {
+    article {
+        left: 0;
+        right: 0;
+        width: auto;
+    }
+}
+

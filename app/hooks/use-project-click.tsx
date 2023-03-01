@@ -2,14 +2,7 @@ import { useNavigate } from "@remix-run/react";
 import useMapPointer from "~/hooks/map-pointer";
 import { useMapClick, useMapLayerClick } from "~/hooks/map-click";
 
-export const links = () => [
-];
-
-export type ProjectProps = {
-    layerName: string
-}
-
-const Project: React.FC<ProjectProps> = ({ layerName }) => {
+export default function useProjectClick(layerName: string) {
     const navigate = useNavigate()
     useMapPointer([layerName]);
     useMapClick(() => {
@@ -23,9 +16,5 @@ const Project: React.FC<ProjectProps> = ({ layerName }) => {
             navigate(href)
         }
     })
-
-    return null;
 }
-
-export default Project
 

@@ -1,6 +1,12 @@
 import { json } from "@remix-run/node";
-import type { MetaFunction } from "@remix-run/node";
 import { YMInitializer } from "react-yandex-metrika";
+
+import type { MetaFunction } from "@remix-run/node";
+
+import mapboxStyles from "mapbox-gl/dist/mapbox-gl.css";
+import styles from "~/styles/index.css";
+import mapboxCustomStyles from "~/styles/mapbox.css";
+import { links as mainMainStyles } from "~/components/main-map";
 
 import {
     Links,
@@ -11,6 +17,7 @@ import {
     ScrollRestoration,
     useLoaderData,
 } from "@remix-run/react";
+import MainMap from "./components/main-map";
 
 export const meta: MetaFunction = () => ({
     charset: "utf-8",
@@ -26,6 +33,23 @@ export async function loader() {
     });
 }
 
+export function links() {
+    return [
+        {
+            rel: "stylesheet",
+            href: styles,
+        },
+        {
+            rel: "stylesheet",
+            href: mapboxStyles
+        },
+        {
+            rel: "stylesheet",
+            href: mapboxCustomStyles,
+        },
+        ...mainMainStyles(),
+    ];
+}
 export default function App() {
     const data = useLoaderData<typeof loader>();
 
@@ -42,6 +66,7 @@ export default function App() {
                 }} />
             </head>
             <body>
+                <MainMap />
                 <Outlet />
                 <ScrollRestoration />
                 <script

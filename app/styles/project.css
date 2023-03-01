@@ -1,8 +1,16 @@
 article {
     --sx: 20px;
     --md: 36px;
-    position: relative;
     padding: 24px var(--md);
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 65%;
+    height: 100%;
+    overflow: auto;
+    background: white;
+    z-index: 100;
 }
 
 article img {

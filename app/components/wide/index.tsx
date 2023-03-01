@@ -11,7 +11,9 @@ export type WideProps = {
 const Wide: React.FC<WideProps> = ({ children }) => {
     return (
         <section className="wide">
-            {children}
+            <div className="wide-content">
+                {children}
+            </div>
         </section>
     );
 }

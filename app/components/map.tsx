@@ -1,7 +1,12 @@
+import { useEffect, useState } from "react";
 import type { LayerProps } from "react-map-gl";
 import { Layer, Map as MapGl, Source } from "react-map-gl";
+import { useMapLayerClick } from "~/hooks/map-click";
+import useProjectClick from "~/hooks/use-project-click";
 import MapLayerHoverable from "./map-layer-hoverable";
 import MapPopup from "./map-popup";
+import bbox from "@turf/bbox";
+import mapboxgl from "mapbox-gl";
 
 const layerStyleCircle: LayerProps = {
     id: "project-circle",
@@ -68,6 +73,65 @@ const layerStyleSymbol: LayerProps = {
 //     [196.44705902596996, 83.1613784193168],
 // ]
 
+function useProjectBounds() {
+    const [state, setState] = useState<GeoJSON.FeatureCollection | null>()
+    useEffect(() => {
+        const stop = new AbortController()
+        fetch("/boundaries.geojson", {
+            signal: stop.signal,
+        })
+            .then(res => {
+                if (!res.ok) {
+                    throw new Error("not ok")
+                }
+                return res.json()
+            })
+            .then(data => {
+                setState(data)
+            })
+            .catch(err => { })
+        return () => {
+            stop.abort()
+        }
+    }, [])
+
+    return (id: number) => {
+        if (!state) {
+            return null
+        }
+        const project = state.features.find(f => f.properties!.id === id)
+        return bbox(project);
+    }
+}
+
+const MapCtrl: React.FC = () => {
+    const getProjectBounds = useProjectBounds()
+
+    useMapLayerClick("project-circle", event => {
+        if (event.features!.length !== 1) {
+            return
+        }
+        const f = event.features![0]
+        const id = f.properties!.id
+        const bounds = getProjectBounds(id)
+        if (!bounds) {
+            return
+        }
+
+        const map = event.target
+        map.fitBounds(bounds as mapboxgl.LngLatBoundsLike, {
+            padding: {
+                top: 10,
+                bottom: 10,
+                left: 10,
+                right: 750,
+            },
+        })
+    })
+
+    return null
+}
+
 export type MapProps = {
 }
 
@@ -105,6 +169,7 @@ const Map: React.FC<MapProps> = () => {
             <MapPopup
                 layerName={"project-circle"}
             />
+            <MapCtrl />
         </MapGl>
     );
 }

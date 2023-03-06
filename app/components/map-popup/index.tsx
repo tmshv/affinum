@@ -109,7 +109,6 @@ const MapPopup: React.FC<MapPopupProps> = ({ layerName }) => {
             latitude={info.coord[1]}
             anchor="bottom"
             onClose={() => {
-                console.log("called popup onClose")
                 setInfo(null)
             }}
             // closeOnClick={false}

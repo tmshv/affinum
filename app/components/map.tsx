@@ -140,6 +140,7 @@ const Map: React.FC<MapProps> = () => {
 
     return (
         <MapGl
+            hash={true}
             initialViewState={{
                 longitude: 96.734667,
                 latitude: 68.280744,

@@ -5,8 +5,7 @@ import { useMapLayerClick } from "~/hooks/map-click";
 import useProjectClick from "~/hooks/use-project-click";
 import MapLayerHoverable from "./map-layer-hoverable";
 import MapPopup from "./map-popup";
-import bbox from "@turf/bbox";
-import mapboxgl from "mapbox-gl";
+import useProjectBounds from "~/hooks/use-project-bounds";
 
 const layerStyleCircle: LayerProps = {
     id: "project-circle",
@@ -73,39 +72,8 @@ const layerStyleSymbol: LayerProps = {
 //     [196.44705902596996, 83.1613784193168],
 // ]
 
-function useProjectBounds() {
-    const [state, setState] = useState<GeoJSON.FeatureCollection | null>()
-    useEffect(() => {
-        const stop = new AbortController()
-        fetch("/boundaries.geojson", {
-            signal: stop.signal,
-        })
-            .then(res => {
-                if (!res.ok) {
-                    throw new Error("not ok")
-                }
-                return res.json()
-            })
-            .then(data => {
-                setState(data)
-            })
-            .catch(err => { })
-        return () => {
-            stop.abort()
-        }
-    }, [])
-
-    return (id: number) => {
-        if (!state) {
-            return null
-        }
-        const project = state.features.find(f => f.properties!.id === id)
-        return bbox(project);
-    }
-}
-
 const MapCtrl: React.FC = () => {
-    const getProjectBounds = useProjectBounds()
+    const getProjectBounds = useProjectBounds("/boundaries.geojson")
 
     useMapLayerClick("project-circle", event => {
         if (event.features!.length !== 1) {
@@ -117,7 +85,6 @@ const MapCtrl: React.FC = () => {
         if (!bounds) {
             return
         }
-
         const map = event.target
         map.fitBounds(bounds as mapboxgl.LngLatBoundsLike, {
             padding: {

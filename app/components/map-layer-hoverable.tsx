@@ -72,7 +72,7 @@ const MapLayerHoverable: React.FC<MapLayerHoverableProps> = () => {
 
     return (
         <>
-            <Source id="russia-states" type="geojson" data="/states.geojson">
+            <Source id="russia-states" type="geojson" data="/states-naturalearth.geojson">
                 <Layer {...layer} />
             </Source>
             {!state ? null : (

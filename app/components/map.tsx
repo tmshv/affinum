@@ -119,7 +119,7 @@ const Map: React.FC<MapProps> = () => {
             }}
             mapStyle="mapbox://styles/tmshv/cld4aqnw8000e01qwdzz15s6s"
             mapboxAccessToken={mapboxAccessToken}
-            minZoom={1}
+            minZoom={2}
             // maxBounds={maxBounds}
             projection={"mercator"}
         >

@@ -60,10 +60,6 @@ export default function App() {
                 <Links />
 
                 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-
-                <YMInitializer accounts={[ 92606872 ]} options={{
-                    defer: true,
-                }} />
             </head>
             <body>
                 <MainMap />
@@ -76,6 +72,9 @@ export default function App() {
                         )}`,
                     }}
                 />
+                <YMInitializer accounts={[ 92606872 ]} options={{
+                    defer: true,
+                }} />
                 <Scripts />
                 <LiveReload />
             </body>

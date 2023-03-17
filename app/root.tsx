@@ -72,7 +72,7 @@ export default function App() {
                         )}`,
                     }}
                 />
-                <YMInitializer accounts={[ 92606872 ]} options={{
+                <YMInitializer version="2" accounts={[ 92606872 ]} options={{
                     defer: true,
                 }} />
                 <Scripts />

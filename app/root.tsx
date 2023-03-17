@@ -1,5 +1,4 @@
 import { json } from "@remix-run/node";
-import { YMInitializer } from "react-yandex-metrika";
 
 import type { MetaFunction } from "@remix-run/node";
 
@@ -18,6 +17,7 @@ import {
     useLoaderData,
 } from "@remix-run/react";
 import MainMap from "./components/main-map";
+import YandexMetrika from "./components/yandex-metrika";
 
 export const meta: MetaFunction = () => ({
     charset: "utf-8",
@@ -50,6 +50,7 @@ export function links() {
         ...mainMainStyles(),
     ];
 }
+
 export default function App() {
     const data = useLoaderData<typeof loader>();
 
@@ -72,9 +73,7 @@ export default function App() {
                         )}`,
                     }}
                 />
-                <YMInitializer version="2" accounts={[ 92606872 ]} options={{
-                    defer: true,
-                }} />
+                <YandexMetrika counter={92606872} />
                 <Scripts />
                 <LiveReload />
             </body>

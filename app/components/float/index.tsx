@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import styles from "./styles.css";
 import useResizeHandler from "~/hooks/use-resize-handler";
 
@@ -10,11 +11,19 @@ export const links = () => [
 ];
 
 export type FloatProps = {
+    value: number
     children: React.ReactNode
+    onChange?: (width: number, absoluteWidth: number) => void
 }
 
-export const Float: React.FC<FloatProps> = ({ children }) => {
-    const { ref, width } = useResizeHandler(0.65, 0.10, 0.9)
+export const Float: React.FC<FloatProps> = ({ value, children, onChange }) => {
+    const { ref, width, absoluteWidth } = useResizeHandler(value, 0.10, 0.9)
+
+    useEffect(() => {
+        if (typeof onChange === "function") {
+            onChange(width, absoluteWidth)
+        }
+    }, [width, absoluteWidth, onChange])
 
     return (
         <div className="float" style={{

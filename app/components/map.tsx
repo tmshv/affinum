@@ -1,11 +1,8 @@
-import { useEffect, useState } from "react";
 import type { LayerProps } from "react-map-gl";
 import { Layer, Map as MapGl, Source } from "react-map-gl";
-import { useMapLayerClick } from "~/hooks/map-click";
 import useProjectClick from "~/hooks/use-project-click";
 import MapLayerHoverable from "./map-layer-hoverable";
 import MapPopup from "./map-popup";
-import useProjectBounds from "~/hooks/use-project-bounds";
 
 const layerStyleCircle: LayerProps = {
     id: "project-circle",
@@ -73,36 +70,16 @@ const layerStyleSymbol: LayerProps = {
 // ]
 
 const MapCtrl: React.FC = () => {
-    const getProjectBounds = useProjectBounds("/boundaries.geojson")
-
-    useMapLayerClick("project-circle", event => {
-        if (event.features!.length !== 1) {
-            return
-        }
-        const f = event.features![0]
-        const id = f.properties!.id
-        const bounds = getProjectBounds(id)
-        if (!bounds) {
-            return
-        }
-        const map = event.target
-        map.fitBounds(bounds as mapboxgl.LngLatBoundsLike, {
-            padding: {
-                top: 10,
-                bottom: 10,
-                left: 10,
-                right: 750,
-            },
-        })
-    })
+    useProjectClick("project-circle")
 
     return null
 }
 
 export type MapProps = {
+    children: React.ReactNode
 }
 
-const Map: React.FC<MapProps> = () => {
+const Map: React.FC<MapProps> = ({ children }) => {
     const mapboxAccessToken = (window as any).ENV.MAPBOX_ACCESS_KEY
 
     return (
@@ -138,6 +115,8 @@ const Map: React.FC<MapProps> = () => {
                 layerName={"project-circle"}
             />
             <MapCtrl />
+
+            {children}
         </MapGl>
     );
 }

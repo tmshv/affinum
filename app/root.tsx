@@ -18,6 +18,7 @@ import {
 } from "@remix-run/react";
 import MainMap from "./components/main-map";
 import YandexMetrika from "./components/yandex-metrika";
+import { AppContext, defaultAppContextValue } from "./context/AppContext";
 
 export const meta: MetaFunction = () => ({
     charset: "utf-8",
@@ -63,8 +64,9 @@ export default function App() {
                 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
             </head>
             <body>
-                <MainMap />
-                <Outlet />
+                <MainMap>
+                    <Outlet />
+                </MainMap>
                 <ScrollRestoration />
                 <script
                     dangerouslySetInnerHTML={{

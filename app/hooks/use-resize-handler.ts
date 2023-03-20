@@ -13,7 +13,10 @@ function clamp(value: number, min: number, max: number) {
 export default function useResizeHandler(startWidth: number, minWidth: number, maxWidth: number) {
     const ref = useRef<HTMLDivElement>(null)
     const refx = useRef<number>(0)
-    const [width, setWidth] = useState(startWidth)
+    const [width, setWidth] = useState({
+        width: startWidth,
+        absoluteWidth: startWidth * window.innerWidth,
+    })
 
     const up = useCallback(() => {
         refx.current = 0
@@ -35,7 +38,10 @@ export default function useResizeHandler(startWidth: number, minWidth: number, m
             let w = containerWidth - x;
             let r = w / containerWidth;
             const width = clamp(r, minWidth, maxWidth)
-            setWidth(width)
+            setWidth({
+                width,
+                absoluteWidth: width * w,
+            })
         }
 
         ref!.current!.addEventListener("mousedown", down)
@@ -48,5 +54,9 @@ export default function useResizeHandler(startWidth: number, minWidth: number, m
         }
     }, [startWidth, minWidth, maxWidth, up])
 
-    return { ref, width }
+    return {
+        ref,
+        width: width.width,
+        absoluteWidth: width.absoluteWidth,
+    }
 }

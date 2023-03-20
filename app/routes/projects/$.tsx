@@ -1,9 +1,9 @@
 import { json } from "@remix-run/node";
 import type { LoaderFunction } from "@remix-run/node";
 import { getMDXComponent } from "mdx-bundler/client";
-import { useMemo } from "react";
+import { useCallback, useContext, useEffect, useMemo, useState } from "react";
 import { getPost } from "~/lib/api";
-import { useLoaderData } from "@remix-run/react";
+import { useLoaderData, useMatches } from "@remix-run/react";
 import Hero from "~/components/hero"
 import AffinumLogo from "~/components/affinum-logo";
 import Wide from "~/components/wide";
@@ -14,6 +14,9 @@ import projectStyles from "~/styles/project.css";
 import { links as heroLinks } from "~/components/hero"
 import { links as wideLinks } from "~/components/wide"
 import { links as floatFinks } from "~/components/float"
+import { AppContext, Padding } from "~/context/AppContext";
+import { MapProjectZoomer } from "~/components/map-project-zoomer";
+import App from "~/root";
 
 export function links() {
     return [
@@ -62,18 +65,48 @@ const Paragraph: React.FC = (props: any) => {
 export default function Post() {
     const { code } = useLoaderData<LoaderData>();
     const Component = useMemo(() => getMDXComponent(code), [code]);
+    const context = useContext(AppContext)
+    const [padding, setPadding] = useState<Padding | null>(null)
+    const changed = useCallback((width: number, absoluteWidth: number) => {
+        const s = 10
+        const right = s + absoluteWidth
+        if (padding?.right === right) {
+            return
+        }
+        setPadding({
+            left: s,
+            right,
+            top: s,
+            bottom: s,
+        })
+        context?.setSidePanelRatio(width)
+    }, [padding, context])
+
+    const matches = useMatches()
+    const slug = matches[0].params["*"]
 
     return (
-        <Float>
-            <article>
-                <Component components={{
-                    Hero,
-                    Wide,
-                    AffinumLogo,
-                    p: Paragraph,
-                }} />
-            </article>
-        </Float>
+        <>
+            {!padding || !slug ? null : (
+                <MapProjectZoomer
+                    padding={padding}
+                    slug={slug}
+                />
+            )}
+            <Float
+                value={context?.sidePanelRatio ?? 0.65}
+                onChange={changed}
+            >
+                <article>
+                    <Component components={{
+                        Hero,
+                        Wide,
+                        AffinumLogo,
+                        p: Paragraph,
+                    }} />
+                </article>
+            </Float>
+        </>
     );
 }
 

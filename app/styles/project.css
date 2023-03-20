@@ -2,15 +2,7 @@ article {
     --sx: 20px;
     --md: 36px;
     padding: 24px var(--md);
-
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 65%;
-    height: 100%;
-    overflow: auto;
     background: rgba(255, 255, 255, 0.75);
-    z-index: 100;
 }
 
 article img {
@@ -43,6 +35,8 @@ article h2 {
     article {
         --sx: 10px;
         --md: 20px;
+
+        background: rgba(255, 255, 255, 1);
     }
 
     article h1 {

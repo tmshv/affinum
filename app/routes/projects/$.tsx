@@ -7,11 +7,13 @@ import { useLoaderData } from "@remix-run/react";
 import Hero from "~/components/hero"
 import AffinumLogo from "~/components/affinum-logo";
 import Wide from "~/components/wide";
+import { Float } from "~/components/float";
 
 import styles from "~/styles/index.css";
 import projectStyles from "~/styles/project.css";
 import { links as heroLinks } from "~/components/hero"
 import { links as wideLinks } from "~/components/wide"
+import { links as floatFinks } from "~/components/float"
 
 export function links() {
     return [
@@ -25,6 +27,7 @@ export function links() {
         },
         ...heroLinks(),
         ...wideLinks(),
+        ...floatFinks(),
     ];
 }
 
@@ -61,14 +64,16 @@ export default function Post() {
     const Component = useMemo(() => getMDXComponent(code), [code]);
 
     return (
-        <article>
-            <Component components={{
-                Hero,
-                Wide,
-                AffinumLogo,
-                p: Paragraph,
-            }} />
-        </article>
+        <Float>
+            <article>
+                <Component components={{
+                    Hero,
+                    Wide,
+                    AffinumLogo,
+                    p: Paragraph,
+                }} />
+            </article>
+        </Float>
     );
 }
 

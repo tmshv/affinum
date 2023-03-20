@@ -3,7 +3,7 @@ import type { LoaderFunction } from "@remix-run/node";
 import { getMDXComponent } from "mdx-bundler/client";
 import { useMemo } from "react";
 import { getPost } from "~/lib/api";
-import { Link, useLoaderData } from "@remix-run/react";
+import { useLoaderData } from "@remix-run/react";
 import Hero from "~/components/hero"
 import AffinumLogo from "~/components/affinum-logo";
 import Wide from "~/components/wide";
@@ -57,43 +57,18 @@ const Paragraph: React.FC = (props: any) => {
 }
 
 export default function Post() {
-    const { code, frontmatter } = useLoaderData<LoaderData>();
+    const { code } = useLoaderData<LoaderData>();
     const Component = useMemo(() => getMDXComponent(code), [code]);
 
-    const { title, location, cover, area, budget } = frontmatter
-
     return (
-        <>
-            {/* <Link to="/">← Back to blog index</Link> */}
-            {/* <h1>{frontmatter.title}</h1> */}
-
-            {/* <Hero */}
-            {/*     title={title} */}
-            {/*     location={location} */}
-            {/*     src={cover} */}
-            {/*     area={area} */}
-            {/*     budget={budget} */}
-            {/* > */}
-            {/*     <p> */}
-            {/*         Проект-победитель Всероссийского конкурса лучших проектов комфортной городской среды в малых городах и исторических поселениях. */}
-            {/*     </p> */}
-            {/*     <p> */}
-            {/*         Реализация проекта даст Баймаку полноценную горо­дскую площадь. Парковка превратится в современное, разнообразное общественное пространство. На пло­щади появятся сцена и зеленые скверы с местами для */}
-            {/*         отдыха. Памятник Алдар-Батыру и мемориал ВОВ будут */}
-            {/*         благоустроены и включены в ансамбль площади. Авто­мобили займут места по периметру пространства вдоль проездов так, чтобы не мешать пешеходам. За зданием */}
-            {/*         администрации будет разбит городской сад. */}
-            {/*     </p> */}
-            {/* </Hero> */}
-
-            <article>
-                <Component components={{
-                    Hero,
-                    Wide,
-                    AffinumLogo,
-                    p: Paragraph,
-                }} />
-            </article>
-        </>
+        <article>
+            <Component components={{
+                Hero,
+                Wide,
+                AffinumLogo,
+                p: Paragraph,
+            }} />
+        </article>
     );
 }
 

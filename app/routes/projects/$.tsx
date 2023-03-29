@@ -17,6 +17,7 @@ import { links as floatFinks } from "~/components/float"
 import { AppContext, Padding } from "~/context/AppContext";
 import { MapProjectZoomer } from "~/components/map-project-zoomer";
 import App from "~/root";
+import { useMedia } from "react-use";
 
 export function links() {
     return [
@@ -63,6 +64,7 @@ const Paragraph: React.FC = (props: any) => {
 }
 
 export default function Post() {
+    const isMobile = useMedia("(max-width: 768px)")
     const { code } = useLoaderData<LoaderData>();
     const Component = useMemo(() => getMDXComponent(code), [code]);
     const context = useContext(AppContext)
@@ -85,6 +87,32 @@ export default function Post() {
     const matches = useMatches()
     const slug = matches[0].params["*"]
 
+    const content = (
+        <article>
+            <Component components={{
+                Hero,
+                Wide,
+                AffinumLogo,
+                p: Paragraph,
+            }} />
+        </article>
+    )
+
+    if (isMobile) {
+        return (
+            <main style={{
+                background: "lime",
+                width: "100%",
+                height: "100%",
+                zIndex: 10,
+                position: "absolute",
+                overflow: "auto",
+            }}>
+                {content}
+            </main>
+        )
+    }
+
     return (
         <>
             {!padding || !slug ? null : (
@@ -97,14 +125,7 @@ export default function Post() {
                 value={context?.sidePanelRatio ?? 0.65}
                 onChange={changed}
             >
-                <article>
-                    <Component components={{
-                        Hero,
-                        Wide,
-                        AffinumLogo,
-                        p: Paragraph,
-                    }} />
-                </article>
+                {content}
             </Float>
         </>
     );

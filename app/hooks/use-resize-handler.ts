@@ -1,16 +1,8 @@
 import { useCallback, useEffect, useRef, useState } from "react"
 
-function clamp(value: number, min: number, max: number) {
-    if (value < min) {
-        return min
-    }
-    if (value > max) {
-        return max
-    }
-    return value
-}
+export type ResizeTransform = (width: number) => number
 
-export default function useResizeHandler(startWidth: number, minWidth: number, maxWidth: number) {
+export default function useResizeHandler(startWidth: number, transform: ResizeTransform) {
     const ref = useRef<HTMLDivElement>(null)
     const refx = useRef<number>(0)
     const [width, setWidth] = useState({
@@ -37,7 +29,7 @@ export default function useResizeHandler(startWidth: number, minWidth: number, m
             let x = event.pageX;
             let w = containerWidth - x;
             let r = w / containerWidth;
-            const width = clamp(r, minWidth, maxWidth)
+            const width = transform(r)
             setWidth({
                 width,
                 absoluteWidth: width * w,
@@ -52,7 +44,7 @@ export default function useResizeHandler(startWidth: number, minWidth: number, m
             document.removeEventListener("mouseup", up, true)
             document.removeEventListener("mousemove", move, true)
         }
-    }, [startWidth, minWidth, maxWidth, up])
+    }, [startWidth, transform, up])
 
     return {
         ref,

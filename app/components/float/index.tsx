@@ -1,9 +1,19 @@
-import { useEffect } from "react";
+import { useCallback, useEffect } from "react";
 import styles from "./styles.css";
-import useResizeHandler from "~/hooks/use-resize-handler";
+import useResizeHandler, { ResizeTransform } from "~/hooks/use-resize-handler";
 
 function cssPercent(value: number): string {
     return `${value * 100}%`
+}
+
+function clamp(value: number, min: number, max: number) {
+    if (value < min) {
+        return min
+    }
+    if (value > max) {
+        return max
+    }
+    return value
 }
 
 export const links = () => [
@@ -17,7 +27,8 @@ export type FloatProps = {
 }
 
 export const Float: React.FC<FloatProps> = ({ value, children, onChange }) => {
-    const { ref, width, absoluteWidth } = useResizeHandler(value, 0.10, 0.9)
+    const transform = useCallback<ResizeTransform>(value => clamp(value, 0.1, 0.9), [])
+    const { ref, width, absoluteWidth } = useResizeHandler(value, transform)
 
     useEffect(() => {
         if (typeof onChange === "function") {

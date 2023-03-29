@@ -101,7 +101,6 @@ export default function Post() {
     if (isMobile) {
         return (
             <main style={{
-                background: "lime",
                 width: "100%",
                 height: "100%",
                 zIndex: 10,

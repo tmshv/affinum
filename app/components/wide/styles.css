@@ -1,5 +1,5 @@
 .wide {
-    /* position: relative; */
+    position: relative;
     width: 100%;
     aspect-ratio: 16/10;
 }

@@ -1,7 +1,7 @@
 article {
     --sx: 20px;
     --md: 36px;
-    padding: 24px var(--md);
+    /* padding: 24px var(--md); */
     background: white;
 }
 

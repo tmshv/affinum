@@ -1,7 +1,11 @@
+import Nav from '~/components/nav'
 import styles from "./styles.css"
+import { useLocation } from 'react-use'
+import { links as navLinks } from "~/components/nav"
 
 export const links = () => [
     { rel: "stylesheet", href: styles },
+    ...navLinks(),
 ]
 
 export type LayoutProps = {
@@ -9,19 +13,12 @@ export type LayoutProps = {
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
+    const location = useLocation()
+    const isMapPage = location.pathname === "/map"
     return (
-        <div
-            style={{
-                width: '100%',
-                height: '100%',
-            }}
-        >
-            <main
-                style={{
-                    width: '100%',
-                    height: '100%',
-                }}
-            >
+        <div className="container">
+            <Nav />
+            <main>
                 {children}
             </main>
         </div>

@@ -1,10 +1,6 @@
 import { json } from "@remix-run/node"
-
 import type { MetaFunction } from "@remix-run/node"
-
 import styles from "~/styles/index.css"
-import { links as mainMainStyles } from "~/components/main-map"
-
 import {
     Links,
     LiveReload,
@@ -16,6 +12,9 @@ import {
 } from "@remix-run/react"
 import YandexMetrika from "./components/yandex-metrika"
 import Layout from './components/layout'
+
+
+import { links as layoutLinks } from "~/components/layout"
 
 export const meta: MetaFunction = () => ({
     charset: "utf-8",
@@ -37,7 +36,7 @@ export function links() {
             rel: "stylesheet",
             href: styles,
         },
-        ...mainMainStyles(),
+        ...layoutLinks(),
     ]
 }
 

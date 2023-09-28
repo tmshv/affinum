@@ -1,23 +1,22 @@
-import { json } from "@remix-run/node";
-import type { LoaderFunction } from "@remix-run/node";
-import { getMDXComponent } from "mdx-bundler/client";
-import { useCallback, useContext, useEffect, useMemo, useState } from "react";
-import { getPost } from "~/lib/api";
-import { useLoaderData, useMatches } from "@remix-run/react";
+import { json } from "@remix-run/node"
+import type { LoaderFunction } from "@remix-run/node"
+import { getMDXComponent } from "mdx-bundler/client"
+import { useCallback, useContext, useMemo, useState } from "react"
+import { getPost } from "~/lib/api"
+import { useLoaderData, useMatches } from "@remix-run/react"
 import Hero from "~/components/hero"
-import AffinumLogo from "~/components/affinum-logo";
-import Wide from "~/components/wide";
-import { Float } from "~/components/float";
+import AffinumLogo from "~/components/affinum-logo"
+import Wide from "~/components/wide"
+import { Float } from "~/components/float"
 
-import styles from "~/styles/index.css";
-import projectStyles from "~/styles/project.css";
+import styles from "~/styles/index.css"
+import projectStyles from "~/styles/project.css"
 import { links as heroLinks } from "~/components/hero"
 import { links as wideLinks } from "~/components/wide"
 import { links as floatFinks } from "~/components/float"
-import { AppContext, Padding } from "~/context/AppContext";
-import { MapProjectZoomer } from "~/components/map-project-zoomer";
-import App from "~/root";
-import { useMedia } from "react-use";
+import { AppContext, Padding } from "~/context/AppContext"
+import { MapProjectZoomer } from "~/components/map-project-zoomer"
+import { useMedia } from "react-use"
 
 export function links() {
     return [
@@ -32,26 +31,26 @@ export function links() {
         ...heroLinks(),
         ...wideLinks(),
         ...floatFinks(),
-    ];
+    ]
 }
 
 type LoaderData = {
-    frontmatter: any;
-    code: string;
-};
+    frontmatter: any
+    code: string
+}
 
 export const loader: LoaderFunction = async ({ params, request }) => {
-    const slug = params["*"];
-    if (!slug) throw new Response("Not found", { status: 404 });
+    const slug = params["*"]
+    if (!slug) throw new Response("Not found", { status: 404 })
 
-    const post = await getPost(slug);
+    const post = await getPost(slug)
     if (post) {
-        const { frontmatter, code } = post;
-        return json({ frontmatter, code });
+        const { frontmatter, code } = post
+        return json({ frontmatter, code })
     } else {
-        throw new Response("Not found", { status: 404 });
+        throw new Response("Not found", { status: 404 })
     }
-};
+}
 
 const Paragraph: React.FC = (props: any) => {
     if (typeof props.children !== 'string' && props.children.type === 'img') {
@@ -64,9 +63,9 @@ const Paragraph: React.FC = (props: any) => {
 }
 
 export default function Post() {
-    const isMobile = useMedia("(max-width: 768px)")
-    const { code } = useLoaderData<LoaderData>();
-    const Component = useMemo(() => getMDXComponent(code), [code]);
+    const isMobile = useMedia("(max-width: 768px)", false)
+    const { code } = useLoaderData<LoaderData>()
+    const Component = useMemo(() => getMDXComponent(code), [code])
     const context = useContext(AppContext)
     const [padding, setPadding] = useState<Padding | null>(null)
     const changed = useCallback((width: number, absoluteWidth: number) => {
@@ -114,6 +113,12 @@ export default function Post() {
 
     return (
         <>
+            {content}
+        </>
+    )
+
+    return (
+        <>
             {!padding || !slug ? null : (
                 <MapProjectZoomer
                     padding={padding}
@@ -127,6 +132,6 @@ export default function Post() {
                 {content}
             </Float>
         </>
-    );
+    )
 }
 

@@ -1,11 +1,9 @@
-import { json } from "@remix-run/node";
+import { json } from "@remix-run/node"
 
-import type { MetaFunction } from "@remix-run/node";
+import type { MetaFunction } from "@remix-run/node"
 
-import mapboxStyles from "mapbox-gl/dist/mapbox-gl.css";
-import styles from "~/styles/index.css";
-import mapboxCustomStyles from "~/styles/mapbox.css";
-import { links as mainMainStyles } from "~/components/main-map";
+import styles from "~/styles/index.css"
+import { links as mainMainStyles } from "~/components/main-map"
 
 import {
     Links,
@@ -15,23 +13,22 @@ import {
     Scripts,
     ScrollRestoration,
     useLoaderData,
-} from "@remix-run/react";
-import MainMap from "./components/main-map";
-import YandexMetrika from "./components/yandex-metrika";
-import { AppContext, defaultAppContextValue } from "./context/AppContext";
+} from "@remix-run/react"
+import YandexMetrika from "./components/yandex-metrika"
+import Layout from './components/layout'
 
 export const meta: MetaFunction = () => ({
     charset: "utf-8",
     title: "Affinum Map",
     viewport: "width=device-width,initial-scale=1",
-});
+})
 
 export async function loader() {
     return json({
         ENV: {
             MAPBOX_ACCESS_KEY: process.env.MAPBOX_ACCESS_KEY,
         },
-    });
+    })
 }
 
 export function links() {
@@ -40,20 +37,12 @@ export function links() {
             rel: "stylesheet",
             href: styles,
         },
-        {
-            rel: "stylesheet",
-            href: mapboxStyles
-        },
-        {
-            rel: "stylesheet",
-            href: mapboxCustomStyles,
-        },
         ...mainMainStyles(),
-    ];
+    ]
 }
 
 export default function App() {
-    const data = useLoaderData<typeof loader>();
+    const data = useLoaderData<typeof loader>()
 
     return (
         <html lang="en">
@@ -64,9 +53,9 @@ export default function App() {
                 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
             </head>
             <body>
-                <MainMap>
+                <Layout>
                     <Outlet />
-                </MainMap>
+                </Layout>
                 <ScrollRestoration />
                 <script
                     dangerouslySetInnerHTML={{
@@ -80,5 +69,5 @@ export default function App() {
                 <LiveReload />
             </body>
         </html>
-    );
+    )
 }

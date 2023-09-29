@@ -11,10 +11,6 @@
     padding: var(--padding) 0;
 }
 
-.nav-spacer {
-    height: 30px;
-}
-
 .nav ul {
     padding: 0;
     display: flex;
@@ -70,14 +66,6 @@
 }
 
 .mobile-menu-top {
-    margin: var(--padding) 0;
     display: flex;
     justify-content: space-between;
-}
-
-.button-mobile-menu-close {
-    width: 16px;
-    height: 16px;
-    display: flex;
-    margin-left: auto;
 }

@@ -90,9 +90,10 @@ const Nav: React.FC<NavProps> = () => {
                     {isMobile && (
                         <div className={`mobile-menu ${isMenuOpen && "mobile-menu-opened"}`}>
                             <div className="mobile-menu-top" >
-                                <Logo width={166} height={10} fill={'black'} />
+                                <div>
+                                    <Logo width={166} height={10} fill={'black'} />
+                                </div>
                                 <div
-                                    className="button-mobile-menu-close"
                                     onClick={() => setIsMenuOpen(false)}
                                 >
                                     <LogoPlus
@@ -118,7 +119,6 @@ const Nav: React.FC<NavProps> = () => {
                     )}
                 </div>
             </nav>
-            <div className="nav-spacer" />
         </>
     )
 }

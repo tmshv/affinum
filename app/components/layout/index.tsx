@@ -2,10 +2,13 @@ import Nav from '~/components/nav'
 import styles from "./styles.css"
 import { useLocation } from 'react-use'
 import { links as navLinks } from "~/components/nav"
+import { links as footerLinks } from "~/components/footer"
+import Footer from '../footer'
 
 export const links = () => [
     { rel: "stylesheet", href: styles },
     ...navLinks(),
+    ...footerLinks(),
 ]
 
 export type LayoutProps = {
@@ -21,6 +24,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <main>
                 {children}
             </main>
+            <Footer />
         </div>
     )
 }

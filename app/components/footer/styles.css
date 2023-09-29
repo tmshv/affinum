@@ -1,0 +1,21 @@
+.footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    row-gap: 28px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.button {
+    position: relative;
+    width: 15px;
+    transform: translateX(-50%);
+}
+
+@media screen and (max-width: 800px) {}

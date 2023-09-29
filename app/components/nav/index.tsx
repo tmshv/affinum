@@ -2,7 +2,7 @@ import { Link } from '@remix-run/react'
 import styles from "./styles.css"
 import { Logo, LogoPlus } from '../affinum-logo'
 import { useMedia } from 'react-use'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export const links = () => [
     { rel: "stylesheet", href: styles },
@@ -32,6 +32,13 @@ const buttons = [
 const Nav: React.FC<NavProps> = () => {
     const isMobile = useMedia("(max-width: 768px)", false)
     const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+    useEffect(() => {
+        if (!document) {
+            return
+        }
+        document.body.style.touchAction = isMenuOpen ? 'none' : 'auto'
+    }, [isMenuOpen])
 
     return (
         <>

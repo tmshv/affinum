@@ -88,34 +88,40 @@ const Nav: React.FC<NavProps> = () => {
                         </div>
                     )}
                     {isMobile && (
-                        <div className={`mobile-menu ${isMenuOpen && "mobile-menu-opened"}`}>
-                            <div className="mobile-menu-top" >
-                                <div>
-                                    <Logo width={166} height={10} fill={'black'} />
+                        <>
+                            <div className={`shadow ${isMenuOpen && "shadow-opened"}`} />
+                            <div className={`mobile-menu ${isMenuOpen && "mobile-menu-opened"}`}>
+                                <div className="mobile-menu-top" >
+                                    <Link
+                                        to="/"
+                                        onClick={() => setIsMenuOpen(false)}
+                                    >
+                                        <Logo width={166} height={10} fill={'black'} />
+                                    </Link>
+                                    <div
+                                        onClick={() => setIsMenuOpen(false)}
+                                    >
+                                        <LogoPlus
+                                            width={12}
+                                            height={12}
+                                            fill="black"
+                                        />
+                                    </div>
                                 </div>
-                                <div
-                                    onClick={() => setIsMenuOpen(false)}
-                                >
-                                    <LogoPlus
-                                        width={12}
-                                        height={12}
-                                        fill="black"
-                                    />
-                                </div>
+                                <ul>
+                                    {buttons.map(x => (
+                                        <li key={x.href}>
+                                            <Link
+                                                to={x.href}
+                                                onClick={() => setIsMenuOpen(false)}
+                                            >
+                                                {x.text}
+                                            </Link>
+                                        </li>
+                                    ))}
+                                </ul>
                             </div>
-                            <ul>
-                                {buttons.map(x => (
-                                    <li key={x.href}>
-                                        <Link
-                                            to={x.href}
-                                            onClick={() => setIsMenuOpen(false)}
-                                        >
-                                            {x.text}
-                                        </Link>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
+                        </>
                     )}
                 </div>
             </nav>

@@ -1,7 +1,18 @@
 .nav {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
     width: 100%;
     display: flex;
     justify-content: space-between;
+    background-color: white;
+
+    padding: var(--padding) 0;
+}
+
+.nav-spacer {
+    height: 30px;
 }
 
 .nav ul {
@@ -19,7 +30,6 @@
 .nav a {
     color: black;
     text-decoration: none;
-    padding: 4px;
 }
 
 .nav a:hover {
@@ -30,4 +40,44 @@
     display: flex;
     align-items: center;
     gap: 1rem;
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 100vw;
+    z-index: 1;
+    width: calc(100vw - var(--padding) * 2);
+    height: calc(100vh - var(--padding) * 2);
+    background-color: white;
+    padding: var(--padding);
+
+    transition: left .25s ease-out;
+}
+
+.mobile-menu-opened {
+    left: 0;
+    right: 0;
+}
+
+.mobile-menu ul {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+}
+
+.mobile-menu-top {
+    margin: var(--padding) 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-mobile-menu-close {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    margin-left: auto;
 }

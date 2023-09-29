@@ -6,7 +6,7 @@
     align-items: center;
     padding: var(--padding);
     padding-top: 0;
-    min-height: calc(100vh - var(--padding) * 2);
+    min-height: calc(100vh - var(--padding));
 }
 
 .container>main {

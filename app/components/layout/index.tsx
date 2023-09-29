@@ -18,6 +18,19 @@ export type LayoutProps = {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
     const location = useLocation()
     const isMapPage = location.pathname === "/map"
+
+    if (isMapPage) {
+        return (
+            <div className="container">
+                <Nav />
+                <main style={{
+                    flex: '1 0 100px', // absolute value is reqired
+                }}>
+                    {children}
+                </main>
+            </div>
+        )
+    }
     return (
         <div className="container">
             <Nav />

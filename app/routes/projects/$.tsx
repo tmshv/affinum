@@ -97,6 +97,12 @@ export default function Post() {
         </article>
     )
 
+    return (
+        <>
+            {content}
+        </>
+    )
+
     if (isMobile) {
         return (
             <main style={{
@@ -110,12 +116,6 @@ export default function Post() {
             </main>
         )
     }
-
-    return (
-        <>
-            {content}
-        </>
-    )
 
     return (
         <>

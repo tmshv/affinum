@@ -18,3 +18,9 @@
 .container>* {
     max-width: var(--max-width);
 }
+
+main {
+    /* absolute value is reqired */
+    flex: 1 0 100px;
+    padding: var(--padding) 0;
+}

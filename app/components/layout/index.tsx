@@ -23,9 +23,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         return (
             <div className="container">
                 <Nav />
-                <main style={{
-                    flex: '1 0 100px', // absolute value is reqired
-                }}>
+                <main>
                     {children}
                 </main>
             </div>

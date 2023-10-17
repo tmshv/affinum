@@ -10,6 +10,7 @@ export const links = () => [
 export type FooterProps = {}
 
 const colsMax = 38
+const plusSize = 8
 
 const Footer: React.FC<FooterProps> = () => {
 
@@ -27,8 +28,8 @@ const Footer: React.FC<FooterProps> = () => {
                     key={i}
                     src={plusImage}
                     alt="plus"
-                    width={15}
-                    height={15}
+                    width={plusSize}
+                    height={22}
                 />
             ))}
         </div>
@@ -39,9 +40,7 @@ const Footer: React.FC<FooterProps> = () => {
             <footer className="footer">
                 {fullRow}
                 <div className="row">
-                    <div style={{
-                        paddingRight: 7,
-                    }}>
+                    <div>
                         <Logo width={166} height={10} fill="black" />
                     </div>
                     {Array(cols - 5 - 2).fill(null).map((x, i) => (
@@ -49,20 +48,22 @@ const Footer: React.FC<FooterProps> = () => {
                             key={i}
                             src={plusImage}
                             alt="plus"
-                            width={15}
-                            height={15}
+                            width={plusSize}
+                            height={22}
                         />
                     ))}
                     <div className="button">
-                        <div>
+                        <div style={{
+                            width: plusSize,
+                        }}>
                             RU
                         </div>
                     </div>
                     <img
                         src={plusImage}
                         alt="plus"
-                        width={15}
-                        height={15}
+                        width={plusSize}
+                        height={22}
                     />
                 </div>
                 {fullRow}

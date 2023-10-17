@@ -9,13 +9,21 @@
 .row {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
+}
+
+.row>img {
+    margin-top: 2px;
 }
 
 .button {
     position: relative;
-    width: 15px;
-    transform: translateX(-50%);
+    transform: translateX(-100%);
+    margin-top: 2px;
 }
 
-@media screen and (max-width: 800px) {}
+@media screen and (max-width: 800px) {
+    .button {
+        transform: translateX(-50%);
+    }
+}

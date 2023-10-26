@@ -1,0 +1,28 @@
+.flex-container {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--padding);
+    margin-bottom: 64px;
+}
+
+.col {
+    flex-flow: column;
+}
+
+.flex-container>div {
+    position: relative;
+}
+
+/* comes with project styles */
+/* .flex-container>div>img {
+    width: 100%;
+} */
+
+@media screen and (max-width: 800px) {
+    .flex-container {
+        flex-flow: column;
+        align-items: stretch;
+    }
+}

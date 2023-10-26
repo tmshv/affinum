@@ -21,6 +21,7 @@ import { MapProjectZoomer } from "~/components/map-project-zoomer"
 import { useMedia } from "react-use"
 import { Flex } from '~/components/flex'
 import { ProductHero } from '~/components/productHero'
+import { FlexItem } from '~/components/flex/item'
 
 export function links() {
     return [
@@ -100,7 +101,7 @@ export default function Post() {
                 AffinumLogo,
                 p: Paragraph,
                 Flex,
-                FlexItem: ({ children }) => <div>{children}</div>,
+                FlexItem,
                 ProductHero,
             }} />
         </article>

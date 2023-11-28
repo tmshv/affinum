@@ -50,7 +50,7 @@ export const loader: LoaderFunction = async ({ params, request }) => {
     const slug = params["*"]
     if (!slug) throw new Response("Not found", { status: 404 })
 
-    const post = await getPost(`projects/${slug}`)
+    const post = await getPost(`products/${slug}`)
     if (post) {
         const { frontmatter, code } = post
         return json({ frontmatter, code })

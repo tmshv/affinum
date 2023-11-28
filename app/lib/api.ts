@@ -15,7 +15,7 @@ export type PostMarkdownAttributes = {
 
 export async function getPost(slug: string) {
     const source = await readFile(
-        path.join(`${__dirname}/../projects`, slug + ".mdx"),
+        path.join(`${__dirname}/../`, slug + ".mdx"),
         "utf-8"
     );
     // const rehypeHighlight = await import("rehype-highlight").then(

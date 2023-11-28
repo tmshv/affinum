@@ -3,6 +3,7 @@ import styles from "./styles.css"
 import { Logo, LogoPlus } from '../affinum-logo'
 import { useMedia } from 'react-use'
 import { useEffect, useState } from 'react'
+import SearchIcon from '../search-icon'
 
 export const links = () => [
     { rel: "stylesheet", href: styles },
@@ -47,8 +48,8 @@ const Nav: React.FC<NavProps> = () => {
             >
                 <Link to="/">
                     <Logo
-                        width={166}
-                        height={10}
+                        width={233}
+                        height={14}
                         fill="black"
                     />
                 </Link>
@@ -66,16 +67,11 @@ const Nav: React.FC<NavProps> = () => {
                 <div
                     className="icons-container"
                 >
-                    <LogoPlus
-                        width={12}
-                        height={12}
-                        fill="black"
+                    <SearchIcon
+                        width={24}
+                        height={24}
                     />
-                    <LogoPlus
-                        width={12}
-                        height={12}
-                        fill="black"
-                    />
+                    <button className="lang-button">RU</button>
                     {isMobile && ( // menu button
                         <div
                             onClick={() => setIsMenuOpen(true)}

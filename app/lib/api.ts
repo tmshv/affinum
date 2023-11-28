@@ -15,7 +15,7 @@ export type PostMarkdownAttributes = {
 
 export async function getPost(slug: string) {
     const source = await readFile(
-        path.join(`${__dirname}/../`, slug + ".mdx"),
+        path.join(`${__dirname}/../posts/`, slug + ".mdx"),
         "utf-8"
     );
     // const rehypeHighlight = await import("rehype-highlight").then(
@@ -61,14 +61,14 @@ export async function getPost(slug: string) {
 }
 
 export async function getPosts() {
-    const postsPath = await fs.readdir(`${__dirname}/../../projects`, {
+    const postsPath = await fs.readdir(`${__dirname}/../../posts`, {
         withFileTypes: true,
     });
 
     const posts = await Promise.all(
         postsPath.map(async (dirent) => {
             const file = await readFile(
-                path.join(`${__dirname}/../../projects`, dirent.name)
+                path.join(`${__dirname}/../../posts`, dirent.name)
             );
             const { attributes } = parseFrontMatter(file.toString());
             return {

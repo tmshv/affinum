@@ -13,6 +13,7 @@ const Wide: React.FC<WideProps> = ({ children, ar }) => {
     return (
         <section className="wide" style={{
             aspectRatio: ar,
+            marginBottom: 50,
         }}>
             <div className="wide-content">
                 {children}

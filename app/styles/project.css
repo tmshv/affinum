@@ -31,6 +31,30 @@ article h2 {
     font-size: 1.5em;
 }
 
+article h3 {
+    font-family: "Aeroport", Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+
+    font-size: 22px;
+    line-height: normal;
+
+    margin: 0 0 20px 0;
+}
+
+article p {
+    font-family: "Aeroport", Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+
+    font-size: 22px;
+    line-height: normal;
+
+    text-align: justify;
+
+    margin: 0 0 60px 0;
+}
+
 article ul {
     list-style-position: inside;
     padding-left: 0;

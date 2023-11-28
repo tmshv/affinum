@@ -1,6 +1,11 @@
 .timeline-container {
     display: flex;
     flex-flow: column;
+
+    font-family: "Aeroport", Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 300;
 }
 
 .timeline-item {

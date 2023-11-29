@@ -58,6 +58,8 @@ article p {
 article ul {
     list-style-position: inside;
     padding-left: 0;
+    font-size: 22px;
+    font-weight: 300;
 }
 
 @media screen and (max-width: 800px) {

@@ -16,12 +16,15 @@ import { links as wideLinks } from "~/components/wide"
 import { links as floatFinks } from "~/components/float"
 import { links as flexLinks } from "~/components/flex"
 import { links as productHeroLinks } from "~/components/productHero"
+import { links as ladderGalleryLinks } from "~/components/ladder-gallery"
 import { AppContext, Padding } from "~/context/AppContext"
 import { MapProjectZoomer } from "~/components/map-project-zoomer"
 import { useMedia } from "react-use"
 import { Flex } from '~/components/flex'
 import { ProductHero } from '~/components/productHero'
 import { FlexItem } from '~/components/flex/item'
+import LadderGallery from '~/components/ladder-gallery'
+import { LadderGalleryItem } from '~/components/ladder-gallery/item'
 
 export function links() {
     return [
@@ -38,6 +41,7 @@ export function links() {
         ...floatFinks(),
         ...flexLinks(),
         ...productHeroLinks(),
+        ...ladderGalleryLinks(),
     ]
 }
 
@@ -103,6 +107,8 @@ export default function Post() {
                 Flex,
                 FlexItem,
                 ProductHero,
+                LadderGallery,
+                LadderGalleryItem,
             }} />
         </article>
     )

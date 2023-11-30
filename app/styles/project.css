@@ -3,6 +3,8 @@ article {
     --md: 36px;
     /* padding: 24px var(--md); */
     background: white;
+
+    font-size: 22px;
 }
 
 article img {
@@ -47,7 +49,6 @@ article p {
     font-style: normal;
     font-weight: 300;
 
-    font-size: 22px;
     line-height: normal;
 
     text-align: justify;

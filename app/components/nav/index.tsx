@@ -42,10 +42,10 @@ const Nav: React.FC<NavProps> = () => {
     }, [isMenuOpen])
 
     return (
-        <>
-            <nav
-                className="nav"
-            >
+        <nav
+            className="nav"
+        >
+            <div className="nav-container">
                 <Link to="/">
                     <Logo
                         width={233}
@@ -120,8 +120,8 @@ const Nav: React.FC<NavProps> = () => {
                         </>
                     )}
                 </div>
-            </nav>
-        </>
+            </div>
+        </nav>
     )
 }
 

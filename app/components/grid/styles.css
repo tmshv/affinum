@@ -1,17 +1,15 @@
 .grid-container {
-    --gap: 10vw;
+    --gap: 40px;
     /* calc(var(--padding) * 2); */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
     column-gap: var(--gap);
     row-gap: var(--gap);
 }
 
-.grid-container>img {
-    height: 100%;
-    object-fit: cover;
-    margin-bottom: 0;
-    aspect-ratio: 1/1;
+.grid-container img {
+    /* aspect-ratio: 1/1; */
 }
 
 @media screen and (max-width: 800px) {

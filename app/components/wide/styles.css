@@ -10,3 +10,9 @@
     right: 0;
 }
 
+.wide-fullscreen {
+    /* idk wtf is 9px, it just works */
+    left: calc(max(0px, 100vw - 100%) * -.5 - 9px);
+    width: 100vw;
+    height: 100%;
+}

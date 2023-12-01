@@ -11,17 +11,20 @@ export type FlexProps = {
     subtitle: string
     children: React.ReactNode
     shadow?: boolean
+    overlay?: boolean
 }
 
-export const ProductHero: React.FC<FlexProps> = ({ children, title, subtitle, shadow = true }) => {
+export const ProductHero: React.FC<FlexProps> = ({ children, title, subtitle, overlay = true, shadow = true }) => {
     return (
         <Wide>
             {children}
             {shadow && <div className='product-hero-shadow' />}
-            <div className='overlay'>
-                <h1>{title}</h1>
-                <h2>{subtitle}</h2>
-            </div>
+            {!overlay ? null : (
+                <div className='overlay'>
+                    <h1>{title}</h1>
+                    <h2>{subtitle}</h2>
+                </div>
+            )}
         </Wide>
     )
 }

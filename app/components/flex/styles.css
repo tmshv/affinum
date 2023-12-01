@@ -3,8 +3,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    gap: var(--padding);
-    margin-bottom: 64px;
+    gap: 50px;
 }
 
 .col {

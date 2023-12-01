@@ -1,24 +1,26 @@
-import styles from "./styles.css";
+import styles from "./styles.css"
 
 export const links = () => [
     { rel: "stylesheet", href: styles },
-];
+]
 
 export type WideProps = {
     children: React.ReactNode
     ar?: React.CSSProperties["aspectRatio"]
+    fullscreen?: boolean
 }
 
-const Wide: React.FC<WideProps> = ({ children, ar }) => {
+const Wide: React.FC<WideProps> = ({ children, ar, fullscreen = false }) => {
     return (
         <section className="wide" style={{
             aspectRatio: ar,
+            marginBottom: 50,
         }}>
-            <div className="wide-content">
+            <div className={`wide-content ${fullscreen ? "wide-fullscreen" : ""}`}>
                 {children}
             </div>
         </section>
-    );
+    )
 }
 
 export default Wide

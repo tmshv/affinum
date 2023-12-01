@@ -3,11 +3,13 @@ article {
     --md: 36px;
     /* padding: 24px var(--md); */
     background: white;
+
+    font-size: 22px;
 }
 
 article img {
     width: 100%;
-    height: auto;
+    height: 100%;
 
     margin-bottom: var(--sx);
 }
@@ -17,10 +19,10 @@ article h1 {
     font-style: normal;
     font-weight: 400;
 
-    font-size: 48px;
-    line-height: 56px;
+    font-size: 60px;
+    line-height: normal;
 
-    margin: var(--sx) 0px;
+    margin: 0 0 var(--md) 0px;
 }
 
 article h2 {
@@ -29,6 +31,36 @@ article h2 {
     font-weight: 400;
 
     font-size: 1.5em;
+}
+
+article h3 {
+    font-family: "Aeroport", Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+
+    font-size: 22px;
+    line-height: normal;
+
+    margin: 0 0 20px 0;
+}
+
+article p {
+    font-family: "Aeroport", Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+
+    line-height: normal;
+
+    text-align: justify;
+
+    margin: 0 0 60px 0;
+}
+
+article ul {
+    list-style-position: inside;
+    padding-left: 0;
+    font-size: 22px;
+    font-weight: 300;
 }
 
 @media screen and (max-width: 800px) {

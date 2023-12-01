@@ -1,0 +1,21 @@
+.grid-container {
+    --gap: 10vw;
+    /* calc(var(--padding) * 2); */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: var(--gap);
+    row-gap: var(--gap);
+}
+
+.grid-container>img {
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: 0;
+    aspect-ratio: 1/1;
+}
+
+@media screen and (max-width: 800px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}

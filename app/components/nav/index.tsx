@@ -42,86 +42,89 @@ const Nav: React.FC<NavProps> = () => {
     }, [isMenuOpen])
 
     return (
-        <nav
-            className="nav"
-        >
-            <div className="nav-container">
-                <Link to="/">
-                    <Logo
-                        width={233}
-                        height={14}
-                        fill="black"
-                    />
-                </Link>
-                {!isMobile && (
-                    <ul>
-                        {buttons.map(x => (
-                            <li key={x.href}>
-                                <Link to={x.href}>
-                                    {x.text}
-                                </Link>
-                            </li>
-                        ))}
-                    </ul>
-                )}
-                <div
-                    className="icons-container"
-                >
-                    <SearchIcon
-                        width={24}
-                        height={24}
-                    />
-                    <button className="lang-button">RU</button>
-                    {isMobile && ( // menu button
-                        <div
-                            onClick={() => setIsMenuOpen(true)}
-                        >
-                            <LogoPlus
-                                width={12}
-                                height={12}
-                                fill="black"
-                            />
-                        </div>
-                    )}
-                    {isMobile && (
-                        <>
-                            <div className={`shadow ${isMenuOpen && "shadow-opened"}`} />
-                            <div className={`mobile-menu ${isMenuOpen && "mobile-menu-opened"}`}>
-                                <div className="mobile-menu-top" >
-                                    <Link
-                                        to="/"
-                                        onClick={() => setIsMenuOpen(false)}
-                                    >
-                                        <Logo width={166} height={10} fill={'black'} />
+        <>
+            <nav
+                className="nav"
+            >
+                <div className="nav-container">
+                    <Link to="/">
+                        <Logo
+                            width={233}
+                            height={14}
+                            fill="black"
+                        />
+                    </Link>
+                    {!isMobile && (
+                        <ul>
+                            {buttons.map(x => (
+                                <li key={x.href}>
+                                    <Link to={x.href}>
+                                        {x.text}
                                     </Link>
-                                    <div
-                                        onClick={() => setIsMenuOpen(false)}
-                                    >
-                                        <LogoPlus
-                                            width={12}
-                                            height={12}
-                                            fill="black"
-                                        />
-                                    </div>
-                                </div>
-                                <ul>
-                                    {buttons.map(x => (
-                                        <li key={x.href}>
-                                            <Link
-                                                to={x.href}
-                                                onClick={() => setIsMenuOpen(false)}
-                                            >
-                                                {x.text}
-                                            </Link>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        </>
+                                </li>
+                            ))}
+                        </ul>
                     )}
+                    <div
+                        className="icons-container"
+                    >
+                        <SearchIcon
+                            width={24}
+                            height={24}
+                        />
+                        <button className="lang-button">RU</button>
+                        {isMobile && ( // menu button
+                            <div
+                                onClick={() => setIsMenuOpen(true)}
+                            >
+                                <LogoPlus
+                                    width={12}
+                                    height={12}
+                                    fill="black"
+                                />
+                            </div>
+                        )}
+                        {isMobile && (
+                            <>
+                                <div className={`shadow ${isMenuOpen && "shadow-opened"}`} />
+                                <div className={`mobile-menu ${isMenuOpen && "mobile-menu-opened"}`}>
+                                    <div className="mobile-menu-top" >
+                                        <Link
+                                            to="/"
+                                            onClick={() => setIsMenuOpen(false)}
+                                        >
+                                            <Logo width={166} height={10} fill={'black'} />
+                                        </Link>
+                                        <div
+                                            onClick={() => setIsMenuOpen(false)}
+                                        >
+                                            <LogoPlus
+                                                width={12}
+                                                height={12}
+                                                fill="black"
+                                            />
+                                        </div>
+                                    </div>
+                                    <ul>
+                                        {buttons.map(x => (
+                                            <li key={x.href}>
+                                                <Link
+                                                    to={x.href}
+                                                    onClick={() => setIsMenuOpen(false)}
+                                                >
+                                                    {x.text}
+                                                </Link>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            </>
+                        )}
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+            <div className='nav-spacer' />
+        </>
     )
 }
 

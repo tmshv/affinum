@@ -75,6 +75,10 @@ article ul {
         font-size: 36px;
         line-height: 42px;
     }
+
+    article ul {
+        font-size: 12px;
+    }
 }
 
 /* mobile  */

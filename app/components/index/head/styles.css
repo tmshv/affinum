@@ -1,0 +1,29 @@
+.index-head-container {
+    margin: 50px 0 100px 0,
+}
+
+@media screen and (max-width: 768px) {
+    .hidden {
+        display: none;
+    }
+
+    .index-head-container {
+        position: relative;
+        margin: 0;
+        height: calc(100vh - 40px);
+        width: 100vw;
+        left: 50%;
+        margin-left: -50vw;
+        background-size: cover;
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+    }
+
+    .index-head-container>p {
+        max-width: calc(16.6% * 4);
+        color: white;
+        margin: 0 20px 80px 20px;
+    }
+}

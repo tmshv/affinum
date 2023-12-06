@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Grid } from '../grid'
 import styles from "./styles.css"
 import { links as grid } from "~/components/grid"
+import { useMedia } from 'react-use'
 
 export const links = () => [
     { rel: "stylesheet", href: styles },
@@ -33,6 +34,7 @@ const buttons = [
 
 export const ProjectsGrid: React.FC<ProjectsGridProps> = ({ data }) => {
     const [state, setState] = useState(buttons[0].tag)
+    const isMobile = useMedia("(max-width: 768px)", false)
     return (
         <>
             <h2 style={{
@@ -44,8 +46,10 @@ export const ProjectsGrid: React.FC<ProjectsGridProps> = ({ data }) => {
             <div style={{
                 display: 'flex',
                 gap: '2rem',
+                rowGap: 0,
                 color: '#818181',
                 marginBottom: 30,
+                flexWrap: 'wrap',
             }}>
                 {buttons.map((button, i) => (
                     <div
@@ -60,7 +64,7 @@ export const ProjectsGrid: React.FC<ProjectsGridProps> = ({ data }) => {
                     </div>
                 ))}
             </div>
-            <Grid cols={3}>
+            <Grid cols={isMobile ? 1 : 3}>
                 {data
                     .filter(project => state === buttons[0].tag ? true : project.tags.includes(state))
                     .map((project, i) => (
@@ -69,15 +73,11 @@ export const ProjectsGrid: React.FC<ProjectsGridProps> = ({ data }) => {
                             style={{
                                 display: 'flex',
                                 flexDirection: 'column',
-                                marginBottom: 80,
+                                marginBottom: isMobile ? 20 : 80,
                                 color: '#818181',
                             }}
                         >
-                            <img src={project.image}
-                                // style={{
-                                //     aspectRatio: '36 / 26',
-                                // }}
-                            />
+                            <img src={project.image} />
                             <h3>
                                 {project.name}
                             </h3>

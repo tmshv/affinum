@@ -23,3 +23,9 @@ main {
     /* absolute value is reqired */
     flex: 1 0 100px;
 }
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+}

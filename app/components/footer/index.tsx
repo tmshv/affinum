@@ -1,74 +1,31 @@
-import { useSize } from 'react-use'
+import { useMedia, useSize } from 'react-use'
 import styles from "./styles.css"
 import plusImage from "~/../public/plus.svg"
 import { Logo } from '../affinum-logo'
+import { Link } from '@remix-run/react'
+import Plus from '../plus'
 
 export const links = () => [
     { rel: "stylesheet", href: styles },
 ]
 
 export type FooterProps = {}
-
-const colsMax = 38
-const plusSize = 8
-
 const Footer: React.FC<FooterProps> = () => {
-
-    const [tackEl, { width, height }] = useSize(
-        () => <div style={{ width: '100%' }} />,
-        { width: 1440, height: 0 },
-    )
-    const cellSize = 1440 / colsMax
-    const cols = Math.floor(width / cellSize)
-
-    const fullRow = (
-        <div className="row">
-            {Array(cols).fill(null).map((x, i) => (
-                <img
-                    key={i}
-                    src={plusImage}
-                    alt="plus"
-                    width={plusSize}
-                    height={22}
-                />
-            ))}
-        </div>
-    )
-
+    const isMobile = useMedia("(max-width: 768px)", false)
     return (
         <>
             <footer className="footer">
-                {fullRow}
-                <div className="row">
-                    <div>
-                        <Logo width={166} height={10} fill="black" />
-                    </div>
-                    {Array(cols - 5 - 2).fill(null).map((x, i) => (
-                        <img
-                            key={i}
-                            src={plusImage}
-                            alt="plus"
-                            width={plusSize}
-                            height={22}
+                <div className="footer-container">
+                    <Link to="/">
+                        <Logo
+                            width={isMobile ? 156 : 233}
+                            height={isMobile ? 10 : 14}
+                            fill="black"
                         />
-                    ))}
-                    <div className="button">
-                        <div style={{
-                            width: plusSize,
-                        }}>
-                            RU
-                        </div>
-                    </div>
-                    <img
-                        src={plusImage}
-                        alt="plus"
-                        width={plusSize}
-                        height={22}
-                    />
+                    </Link>
+                    <Plus style={{ marginBottom: isMobile ? 1 : 2 }} size={isMobile ? 8 : 11} />
                 </div>
-                {fullRow}
             </footer>
-            {tackEl}
         </>
     )
 }

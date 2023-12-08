@@ -1,6 +1,5 @@
 :root {
     --max-width: 1440px;
-    --padding: 1rem;
     box-sizing: border-box;
 }
 
@@ -51,8 +50,4 @@ body {
     overflow-x: hidden;
 }
 
-@media screen and (max-width: 768px) {
-    :root {
-        --padding: .5rem;
-    }
-}
+@media screen and (max-width: 768px) {}

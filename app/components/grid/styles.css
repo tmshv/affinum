@@ -1,6 +1,5 @@
 .grid-container {
     --gap: 40px;
-    /* calc(var(--padding) * 2); */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;

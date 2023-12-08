@@ -4,6 +4,7 @@ import { Logo, LogoPlus } from '../affinum-logo'
 import { useMedia } from 'react-use'
 import { useEffect, useState } from 'react'
 import SearchIcon from '../search-icon'
+import Plus from '../plus'
 
 export const links = () => [
     { rel: "stylesheet", href: styles },
@@ -49,8 +50,8 @@ const Nav: React.FC<NavProps> = () => {
                 <div className="nav-container">
                     <Link to="/">
                         <Logo
-                            width={233}
-                            height={14}
+                            width={isMobile ? 156 : 233}
+                            height={isMobile ? 10 : 14}
                             fill="black"
                         />
                     </Link>
@@ -68,21 +69,24 @@ const Nav: React.FC<NavProps> = () => {
                     <div
                         className="icons-container"
                     >
-                        <SearchIcon
-                            width={24}
-                            height={24}
-                        />
-                        <button className="lang-button">RU</button>
-                        {isMobile && ( // menu button
+                        {isMobile ? ( // menu button
                             <div
                                 onClick={() => setIsMenuOpen(true)}
                             >
-                                <LogoPlus
-                                    width={12}
-                                    height={12}
-                                    fill="black"
+                                <Plus
+                                    size={isMobile ? 8 : 11}
+                                    style={{ marginBottom: 2 }}
+                                    color="black"
                                 />
                             </div>
+                        ) : (
+                            <>
+                                <SearchIcon
+                                    width={24}
+                                    height={24}
+                                />
+                                <button className="lang-button">RU</button>
+                            </>
                         )}
                         {isMobile && (
                             <>

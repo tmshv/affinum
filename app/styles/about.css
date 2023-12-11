@@ -1,0 +1,18 @@
+article {
+    --space: 100px;
+}
+
+@media screen and (max-width: 800px) {
+    article {
+        --space: 30px;
+    }
+
+    .flex-container {
+        flex-direction: row !important;
+        gap: 30px !important;
+    }
+
+    .grid-container {
+        gap: 30px !important;
+    }
+}

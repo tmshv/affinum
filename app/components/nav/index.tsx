@@ -22,13 +22,17 @@ const buttons = [
         href: "/products",
     },
     {
-        text: "Бюро",
+        text: "О бюро",
         href: "/about",
     },
-    {
-        text: "Контакты",
-        href: "/contacts",
-    },
+    // {
+    //     text: "Бюро",
+    //     href: "/about",
+    // },
+    // {
+    //     text: "Контакты",
+    //     href: "/contacts",
+    // },
 ]
 
 const Nav: React.FC<NavProps> = () => {

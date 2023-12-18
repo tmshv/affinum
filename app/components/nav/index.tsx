@@ -44,9 +44,7 @@ const Nav: React.FC<NavProps> = () => {
 
     return (
         <>
-            <nav
-                className="nav"
-            >
+            <nav className="nav">
                 <div className="nav-container">
                     <Link to="/">
                         <Logo
@@ -66,9 +64,7 @@ const Nav: React.FC<NavProps> = () => {
                             ))}
                         </ul>
                     )}
-                    <div
-                        className="icons-container"
-                    >
+                    <div className="icons-container">
                         {isMobile ? ( // menu button
                             <div
                                 onClick={() => setIsMenuOpen(true)}
@@ -127,7 +123,7 @@ const Nav: React.FC<NavProps> = () => {
                     </div>
                 </div>
             </nav>
-            <div className='nav-spacer' />
+            <div className="nav-spacer" />
         </>
     )
 }

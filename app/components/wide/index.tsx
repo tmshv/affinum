@@ -16,7 +16,7 @@ const Wide: React.FC<WideProps> = ({ children, ar, fullscreen = false }) => {
             aspectRatio: ar,
             marginBottom: 50,
         }}>
-            <div className={`wide-content ${fullscreen ? "wide-fullscreen" : ""}`}>
+            <div className={fullscreen ? "wide-fullscreen" : ""}>
                 {children}
             </div>
         </section>

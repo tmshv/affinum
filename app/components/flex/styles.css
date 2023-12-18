@@ -10,7 +10,7 @@
     flex-flow: column;
 }
 
-.flex-container>div {
+.flex-container > div {
     position: relative;
 }
 

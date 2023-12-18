@@ -15,6 +15,7 @@ import { links as heroLinks } from "~/components/hero"
 import { links as wideLinks } from "~/components/wide"
 import { links as floatFinks } from "~/components/float"
 import { links as flexLinks } from "~/components/flex"
+import { Grid, links as gridLinks } from "~/components/grid"
 import { links as productHeroLinks } from "~/components/productHero"
 import { AppContext, Padding } from "~/context/AppContext"
 import { MapProjectZoomer } from "~/components/map-project-zoomer"
@@ -37,6 +38,7 @@ export function links() {
         ...wideLinks(),
         ...floatFinks(),
         ...flexLinks(),
+        ...gridLinks(),
         ...productHeroLinks(),
     ]
 }
@@ -98,6 +100,9 @@ export default function Post() {
             <Component components={{
                 Hero,
                 Wide,
+                wide: Wide,
+                Grid,
+                grid: Grid,
                 AffinumLogo,
                 p: Paragraph,
                 Flex,

@@ -13,12 +13,12 @@ export type WideProps = {
 const Wide: React.FC<WideProps> = ({ children, ar, fullscreen = false }) => {
     return (
         <section className="wide" style={{
-            aspectRatio: ar,
-            marginBottom: 50,
+            // aspectRatio: ar,
+            // marginBottom: 50,
         }}>
-            <div className={fullscreen ? "wide-fullscreen" : ""}>
-                {children}
-            </div>
+            {children}
+            {/* <div className={fullscreen ? "wide-fullscreen" : ""}> */}
+            {/* </div> */}
         </section>
     )
 }

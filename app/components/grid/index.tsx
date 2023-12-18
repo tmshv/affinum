@@ -18,7 +18,7 @@ export const Grid: React.FC<GridProps> = ({ children, cols }) => {
 
     return (
         <div
-            className='grid-container'
+            className="grid"
             style={{
                 gridTemplateColumns: `repeat(${columns}, 1fr)`,
             }}

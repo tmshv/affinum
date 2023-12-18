@@ -11,7 +11,7 @@ article img {
     width: 100%;
     /* height: 100%; */
 
-    margin-bottom: var(--sx);
+    /* margin-bottom: var(--sx); */
 }
 
 article h1 {
@@ -38,7 +38,7 @@ article h3 {
     font-style: normal;
     font-weight: normal;
 
-    font-size: 22px;
+    font-size: 20px;
     line-height: normal;
 
     margin: 0 0 20px 0;
@@ -51,9 +51,21 @@ article p {
 
     line-height: normal;
 
-    text-align: justify;
+    /* TODO check it out in figma: looks like no more this shitty align */
+    /* text-align: justify; */
 
-    margin: 0 0 60px 0;
+    margin: 0 0 32px 0;
+    /* TODO check this 32px (old value is 60px) */
+}
+
+/* TODO uncomment this but fix broken margin between sections */
+/* article p:last-child { */
+/*     margin-bottom: 0; */
+/* } */
+
+
+article strong {
+    font-weight: 500;
 }
 
 article ul {
@@ -61,6 +73,14 @@ article ul {
     padding-left: 0;
     font-size: 22px;
     font-weight: 300;
+}
+
+.center, .center p {
+    text-align: center;
+}
+
+.left, .left p {
+    text-align: left;
 }
 
 @media screen and (max-width: 800px) {

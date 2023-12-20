@@ -11,6 +11,7 @@ export const links = () => [
 
 export type ProjectsGridProps = {
     data: any[]
+    isTitle?: boolean
 }
 
 const buttons = [
@@ -32,16 +33,18 @@ const buttons = [
     },
 ]
 
-export const ProjectsGrid: React.FC<ProjectsGridProps> = ({ data }) => {
+export const ProjectsGrid: React.FC<ProjectsGridProps> = ({ data, isTitle = true }) => {
     const [state, setState] = useState(buttons[0].tag)
     const isMobile = useMedia("(max-width: 768px)", false)
     return (
         <>
-            <h2 style={{
-                marginBottom: 60,
-            }}>
-                Наши проекты
-            </h2>
+            {isTitle && (
+                <h2 style={{
+                    marginBottom: 60,
+                }}>
+                    Наши проекты
+                </h2>
+            )}
 
             <div style={{
                 display: 'flex',

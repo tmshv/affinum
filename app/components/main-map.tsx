@@ -15,7 +15,7 @@ export function links() {
 }
 
 export type MainMapProps = {
-    children: React.ReactNode
+    children?: React.ReactNode
 }
 
 export default function MainMap({ children }: MainMapProps) {

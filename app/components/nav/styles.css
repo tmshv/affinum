@@ -118,6 +118,6 @@
     }
 
     .nav-spacer {
-        height: calc(20px * 2 + 10px);
+        height: 62px;
     }
 }

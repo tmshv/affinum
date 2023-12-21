@@ -2,12 +2,17 @@ import styles from "~/styles/index.css"
 import projectStyles from "~/styles/project.css"
 import mainStyles from "~/styles/main.css"
 import { links as flexLinks } from "~/components/flex"
+import type { ProjectsGridLoaderData } from "~/components/projectsGrid"
 import { links as projectsGrid } from "~/components/projectsGrid"
 import { ProjectsGrid } from '~/components/projectsGrid'
 import MainMap from '~/components/main-map'
 import mapboxCustomStyles from "~/styles/mapbox.css"
 import { links as mainMainStyles } from "~/components/main-map"
 import mapboxStyles from "mapbox-gl/dist/mapbox-gl.css"
+import { useLoaderData } from '@remix-run/react'
+import type { LoaderFunction } from '@remix-run/node'
+import { json } from '@remix-run/node'
+import { getProjects } from '~/lib/api'
 
 export function links() {
     return [
@@ -37,34 +42,19 @@ export function links() {
     ]
 }
 
-const projectPlaceholder = [
-    {
-        name: 'Музей леса',
-        description: 'Костромская область, г. Шарья\nКонцепция развития Городского парка',
-        image: '/assets/placeholder.jpg',
-        tags: ['social space'],
-    },
-    {
-        name: 'Музей леса',
-        description: 'Костромская область, г. Шарья\nКонцепция развития Городского парка',
-        image: '/assets/placeholder.jpg',
-        tags: ['product'],
-    },
-    {
-        name: 'Музей леса',
-        description: 'Костромская область, г. Шарья\nКонцепция развития Городского парка',
-        image: '/assets/placeholder.jpg',
-        tags: ['research'],
-    },
-    {
-        name: 'Музей леса',
-        description: 'Костромская область, г. Шарья\nКонцепция развития Городского парка',
-        image: '/assets/placeholder.jpg',
-        tags: ['research'],
-    },
-]
+export const loader: LoaderFunction = async ({ params, request }) => {
+    const posts = await getProjects()
+    const projectsFrontmatter = posts.map(post => post.frontmatter)
+    if (posts) {
+        return json(projectsFrontmatter)
+    } else {
+        throw new Response("Not found", { status: 404 })
+    }
+}
 
 export default function Index() {
+    const data = useLoaderData<ProjectsGridLoaderData>()
+
     return (
         <>
             <div style={{
@@ -75,7 +65,7 @@ export default function Index() {
                 <MainMap />
             </div>
             <article>
-                <ProjectsGrid data={projectPlaceholder} isTitle={false} />
+                <ProjectsGrid data={data} isTitle={false} />
             </article>
         </>
     )

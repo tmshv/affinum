@@ -12,6 +12,8 @@
 
 .projectsGrid-cell>img {
     margin-bottom: 20px;
+    aspect-ratio: 360 / 260;
+    object-fit: cover;
 }
 
 .projectsGrid-cell>h3 {

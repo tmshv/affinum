@@ -4,14 +4,22 @@ import styles from "./styles.css"
 import { links as grid } from "~/components/grid"
 import { useMedia } from 'react-use'
 import { Link } from '@remix-run/react'
-import { ProjectsGridLoaderData } from '~/routes'
 
 export const links = () => [
     { rel: "stylesheet", href: styles },
     ...grid(),
 ]
 
-export type ProjectsGridProps = {
+export type ProjectsGridLoaderData = {
+    title: string
+    location: string
+    description: string
+    cover: string
+    tags: string[]
+    href: string
+}[]
+
+type ProjectsGridProps = {
     data: ProjectsGridLoaderData
     isTitle?: boolean
 }

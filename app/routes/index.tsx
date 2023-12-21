@@ -2,7 +2,7 @@ import { json } from "@remix-run/node"
 import type { LoaderFunction } from "@remix-run/node"
 import { getMDXComponent } from "mdx-bundler/client"
 import { useCallback, useContext, useMemo, useState } from "react"
-import { getPost, getPosts } from "~/lib/api"
+import { getPost, getPosts, getProjects } from "~/lib/api"
 import { useLoaderData, useMatches } from "@remix-run/react"
 import Number from "~/components/hero/number"
 import AffinumLogo from "~/components/affinum-logo"
@@ -51,40 +51,34 @@ export function links() {
     ]
 }
 
-const projectPlaceholder = [
-    {
-        name: 'Музей леса',
-        description: 'Костромская область, г. Шарья\nКонцепция развития Городского парка',
-        image: '/assets/placeholder.jpg',
-        tags: ['social space'],
-    },
-    {
-        name: 'Музей леса',
-        description: 'Костромская область, г. Шарья\nКонцепция развития Городского парка',
-        image: '/assets/placeholder.jpg',
-        tags: ['product'],
-    },
-    {
-        name: 'Музей леса',
-        description: 'Костромская область, г. Шарья\nКонцепция развития Городского парка',
-        image: '/assets/placeholder.jpg',
-        tags: ['research'],
-    },
-    {
-        name: 'Музей леса',
-        description: 'Костромская область, г. Шарья\nКонцепция развития Городского парка',
-        image: '/assets/placeholder.jpg',
-        tags: ['research'],
-    },
-]
+export type ProjectsGridLoaderData = {
+    title: string
+    location: string
+    description: string
+    cover: string
+    tags: string[]
+    href: string
+}[]
+
+export const loader: LoaderFunction = async ({ params, request }) => {
+    const posts = await getProjects()
+    const projectsFrontmatter = posts.map(post => post.frontmatter)
+    if (posts) {
+        return json(projectsFrontmatter)
+    } else {
+        throw new Response("Not found", { status: 404 })
+    }
+}
 
 export default function Index() {
+    const data = useLoaderData<ProjectsGridLoaderData>()
+
     return (
         <article>
             <Head />
             <OurNumbers />
             <Competencies />
-            <ProjectsGrid data={projectPlaceholder} />
+            <ProjectsGrid data={data} />
         </article>
     )
 }

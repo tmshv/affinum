@@ -3,6 +3,8 @@ import { Grid } from '../grid'
 import styles from "./styles.css"
 import { links as grid } from "~/components/grid"
 import { useMedia } from 'react-use'
+import { Link } from '@remix-run/react'
+import { ProjectsGridLoaderData } from '~/routes'
 
 export const links = () => [
     { rel: "stylesheet", href: styles },
@@ -10,7 +12,7 @@ export const links = () => [
 ]
 
 export type ProjectsGridProps = {
-    data: any[]
+    data: ProjectsGridLoaderData
     isTitle?: boolean
 }
 
@@ -71,23 +73,25 @@ export const ProjectsGrid: React.FC<ProjectsGridProps> = ({ data, isTitle = true
                 {data
                     .filter(project => state === buttons[0].tag ? true : project.tags.includes(state))
                     .map((project, i) => (
-                        <div
-                            key={project.name}
+                        <Link
+                            key={project.title}
+                            to={project.href}
+                            className={'projectsGrid-cell'}
                             style={{
-                                display: 'flex',
-                                flexDirection: 'column',
                                 marginBottom: isMobile ? 20 : 80,
-                                color: '#818181',
                             }}
                         >
-                            <img src={project.image} />
+                            <img src={project.cover} />
                             <h3>
-                                {project.name}
+                                {project.title}
                             </h3>
+                            <span>
+                                {project.location}
+                            </span>
                             <span>
                                 {project.description}
                             </span>
-                        </div>
+                        </Link>
                     ))}
             </Grid>
         </>

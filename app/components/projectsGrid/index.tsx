@@ -34,13 +34,17 @@ const buttons = [
         tag: 'social space',
     },
     {
-        text: 'Исследования',
-        tag: 'research',
+        text: 'Стратегии',
+        tag: 'strategy',
     },
-    {
-        text: 'Продукты',
-        tag: 'product',
-    },
+    // {
+    //     text: 'Исследования',
+    //     tag: 'research',
+    // },
+    // {
+    //     text: 'Продукты',
+    //     tag: 'product',
+    // },
 ]
 
 export const ProjectsGrid: React.FC<ProjectsGridProps> = ({ data, isTitle = true }) => {
@@ -79,10 +83,13 @@ export const ProjectsGrid: React.FC<ProjectsGridProps> = ({ data, isTitle = true
             </div>
             <Grid cols={isMobile ? 1 : 3}>
                 {data
-                    .filter(project => state === buttons[0].tag ? true : project.tags.includes(state))
+                    .filter(project => state === buttons[0].tag
+                        ? true
+                        : (project.tags ?? []).includes(state)
+                    )
                     .map((project, i) => (
                         <Link
-                            key={project.title}
+                            key={`${project.href}-${i}`}
                             to={project.href}
                             className={'projectsGrid-cell'}
                             style={{

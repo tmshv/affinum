@@ -95,7 +95,7 @@ const OurNumbers: React.FC = () => {
                     </div>
                 </>
             ) : (
-                <Wide fullscreen>
+                <Wide>
                     <img src='/assets/index-02.jpg' />
                     <div style={{
                         position: 'absolute',

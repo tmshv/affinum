@@ -1,17 +1,5 @@
 .wide {
     position: relative;
-    /* width: 100%; */
-    /* aspect-ratio: 16/10; */
-
-    width: 100vw;
-    margin-left: -50vw;
-    left: 50%;
-}
-
-/* TODO not in use */
-.wide-fullscreen {
-    left: 50%;
-    margin-left: -50vw;
-    width: 100vw;
-    height: 100%;
+    width: 100%; 
+    aspect-ratio: 16/10;
 }

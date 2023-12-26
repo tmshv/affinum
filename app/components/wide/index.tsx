@@ -7,18 +7,14 @@ export const links = () => [
 export type WideProps = {
     children: React.ReactNode
     ar?: React.CSSProperties["aspectRatio"]
-    fullscreen?: boolean
 }
 
-const Wide: React.FC<WideProps> = ({ children, ar, fullscreen = false }) => {
+const Wide: React.FC<WideProps> = ({ children, ar }) => {
     return (
         <section className="wide" style={{
-            // aspectRatio: ar,
-            // marginBottom: 50,
+            aspectRatio: ar,
         }}>
             {children}
-            {/* <div className={fullscreen ? "wide-fullscreen" : ""}> */}
-            {/* </div> */}
         </section>
     )
 }

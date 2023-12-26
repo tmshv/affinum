@@ -1,5 +1,10 @@
 .wide {
     position: relative;
-    width: 100%; 
+    width: 100%;
     aspect-ratio: 16/10;
+
+    left: 50%;
+    margin-left: calc(var(--max-width) * -.5);
+    width: var(--max-width);
+    height: 100%;
 }

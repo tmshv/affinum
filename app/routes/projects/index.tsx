@@ -13,6 +13,7 @@ import { useLoaderData } from '@remix-run/react'
 import type { LoaderFunction } from '@remix-run/node'
 import { json } from '@remix-run/node'
 import { getProjects } from '~/lib/api'
+import { useMedia } from 'react-use'
 
 export function links() {
     return [
@@ -54,12 +55,13 @@ export const loader: LoaderFunction = async ({ params, request }) => {
 
 export default function Index() {
     const data = useLoaderData<ProjectsGridLoaderData>()
+    const isMobile = useMedia("(max-width: 768px)", false)
 
     return (
         <>
             <div style={{
                 position: 'relative',
-                aspectRatio: '1200 / 800',
+                aspectRatio: isMobile ? '9 / 15' : '1200 / 800',
                 marginBottom: 40,
             }}>
                 <MainMap />

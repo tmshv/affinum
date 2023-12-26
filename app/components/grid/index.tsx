@@ -27,3 +27,20 @@ export const Grid: React.FC<GridProps> = ({ children, cols }) => {
         </div>
     )
 }
+
+export type ColumnProps = {
+    children: React.ReactNode
+    cols?: number
+}
+
+export const Column: React.FC<ColumnProps> = ({ children, cols = 1 }) => {
+    return (
+        <div
+            style={{
+                gridColumn: `span ${cols}`,
+            }}
+        >
+            {children}
+        </div>
+    )
+}

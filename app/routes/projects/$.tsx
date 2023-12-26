@@ -15,7 +15,7 @@ import { links as heroLinks } from "~/components/hero"
 import { links as wideLinks } from "~/components/wide"
 import { links as floatFinks } from "~/components/float"
 import { links as flexLinks } from "~/components/flex"
-import { Grid, links as gridLinks } from "~/components/grid"
+import { Grid, Column, links as gridLinks } from "~/components/grid"
 import Highlight, { links as highlightLinks } from "~/components/highlight"
 import { links as productHeroLinks } from "~/components/productHero"
 import { AppContext, Padding } from "~/context/AppContext"
@@ -106,6 +106,7 @@ export default function Post() {
                 wide: Wide,
                 Grid,
                 grid: Grid,
+                Column,
                 AffinumLogo,
                 p: Paragraph,
                 Flex,

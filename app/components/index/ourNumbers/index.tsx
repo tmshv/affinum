@@ -95,7 +95,7 @@ const OurNumbers: React.FC = () => {
                     </div>
                 </>
             ) : (
-                <Wide>
+                <Wide ar='unset'>
                     <img src='/assets/index-02.jpg' />
                     <div style={{
                         position: 'absolute',
@@ -106,10 +106,8 @@ const OurNumbers: React.FC = () => {
                         zIndex: 1,
                         display: 'flex',
                         flexDirection: 'column',
-                        gap: 30,
                         justifyContent: 'center',
-                        maxWidth: 'var(--max-width)',
-                        marginLeft: 'calc(50% - var(--max-width) / 2)',
+                        gap: 30,
                     }}>
                         <div style={{
                             display: 'flex',

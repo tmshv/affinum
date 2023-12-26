@@ -68,7 +68,12 @@ const Nav: React.FC<NavProps> = () => {
                             ))}
                         </ul>
                     )}
-                    <div className="icons-container">
+                    <div
+                        className="icons-container"
+                        style={{
+                            width: 233,
+                        }}
+                    >
                         {isMobile ? ( // menu button
                             <div
                                 onClick={() => setIsMenuOpen(true)}
@@ -81,11 +86,11 @@ const Nav: React.FC<NavProps> = () => {
                             </div>
                         ) : (
                             <>
+                                <button className="lang-button">RU</button>
                                 <SearchIcon
                                     width={24}
                                     height={24}
                                 />
-                                <button className="lang-button">RU</button>
                             </>
                         )}
                         {isMobile && (

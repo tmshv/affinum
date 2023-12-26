@@ -59,6 +59,7 @@
 .icons-container {
     display: flex;
     align-items: center;
+    flex-direction: row-reverse;
     gap: 1rem;
 }
 

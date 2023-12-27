@@ -4,7 +4,11 @@ article {
     /* padding: 24px var(--md); */
     background: white;
 
+    font-family: "Aeroport", Arial, Helvetica, sans-serif;
+    font-style: normal;
     font-size: 24px;
+    font-weight: 300;
+    line-height: normal;
 }
 
 article img {
@@ -45,15 +49,6 @@ article h3 {
 }
 
 article p {
-    font-family: "Aeroport", Arial, Helvetica, sans-serif;
-    font-style: normal;
-    font-weight: 300;
-
-    line-height: normal;
-
-    /* TODO check it out in figma: looks like no more this shitty align */
-    /* text-align: justify; */
-
     margin: 0 0 32px 0;
     /* TODO check this 32px (old value is 60px) */
 }
@@ -71,8 +66,6 @@ article strong {
 article ul {
     list-style-position: inside;
     padding-left: 0;
-    font-size: 22px;
-    font-weight: 300;
 }
 
 .center, .center p {

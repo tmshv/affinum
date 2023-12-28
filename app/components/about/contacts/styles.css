@@ -1,0 +1,11 @@
+@media screen and (max-width: 768px) {
+    /* grid */
+    .about-contacts>.grid {
+        grid-template-columns: 1fr 1fr !important;
+    }
+
+    /* column */
+    .about-contacts>div>div {
+        grid-column: span 1 !important;
+    }
+}

@@ -1,0 +1,27 @@
+@media screen and (max-width: 768px) {
+    .about-grid-ceo>div {
+        grid-template-columns: repeat(6, 1fr) !important;
+    }
+
+    .about-grid-ceo>div>div:first-child {
+        grid-column: span 3 !important;
+    }
+
+    .about-grid-ceo>div>div:last-child {
+        grid-column: span 3 !important;
+    }
+
+    .about-grid-ceo h2 {
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 15px;
+    }
+
+    .about-grid-ceo p {
+        font-size: 11px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 14px;
+    }
+}

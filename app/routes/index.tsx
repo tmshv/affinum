@@ -1,5 +1,5 @@
 import styles from "~/styles/index.css"
-import projectStyles from "~/styles/project.css"
+import singleStyles from "~/styles/singlePage.css"
 import mainStyles from "~/styles/main.css"
 import { links as heroLinks } from "~/components/hero"
 import { links as wideLinks } from "~/components/wide"
@@ -23,7 +23,7 @@ export function links() {
         },
         {
             rel: "stylesheet",
-            href: projectStyles,
+            href: singleStyles,
         },
         {
             rel: "stylesheet",

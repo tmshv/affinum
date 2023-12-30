@@ -1,8 +1,8 @@
-import type { LayerProps } from "react-map-gl";
-import { Layer, Map as MapGl, Source } from "react-map-gl";
-import useProjectClick from "~/hooks/use-project-click";
-import MapLayerHoverable from "./map-layer-hoverable";
-import MapPopup from "./map-popup";
+import type { LayerProps } from "react-map-gl"
+import { Layer, Map as MapGl, Source } from "react-map-gl"
+import useProjectClick from "~/hooks/use-project-click"
+import MapLayerHoverable from "./map-layer-hoverable"
+import MapPopup from "./map-popup"
 
 const layerStyleCircle: LayerProps = {
     id: "project-circle",
@@ -13,7 +13,7 @@ const layerStyleCircle: LayerProps = {
         "circle-stroke-width": 2,
         "circle-stroke-color": "#eeeeee",
     }
-};
+}
 
 const layerStyleFill: LayerProps = {
     id: "project-fill",
@@ -29,7 +29,7 @@ const layerStyleFill: LayerProps = {
         ],
     },
     minzoom: 12,
-};
+}
 
 const layerStyleLine: LayerProps = {
     id: "project-line",
@@ -46,7 +46,7 @@ const layerStyleLine: LayerProps = {
         ],
     },
     minzoom: 12,
-};
+}
 
 const layerStyleSymbol: LayerProps = {
     id: "place-name",
@@ -62,7 +62,7 @@ const layerStyleSymbol: LayerProps = {
         "text-size": 10,
         "text-anchor": "left",
     },
-};
+}
 
 // const maxBounds: LngLatBoundsLike = [
 //     [8.414178767074475, 28.939372626536084],
@@ -118,7 +118,7 @@ const Map: React.FC<MapProps> = ({ children }) => {
 
             {children}
         </MapGl>
-    );
+    )
 }
 
 export default Map

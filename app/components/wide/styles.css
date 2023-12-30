@@ -1,12 +1,10 @@
 .wide {
-    /* position: relative; */
+    position: relative;
     width: 100%;
-    aspect-ratio: 16/10;
-}
 
-.wide-content {
-    position: absolute;
-    left: 0;
-    right: 0;
+    /* TODO: WIDE IS DISABLED TEMPORARY */
+    /* left: 50%; */
+    /* margin-left: calc(var(--max-width) * -.5); */
+    /* width: var(--max-width); */
+    /* height: 100%; */
 }
-

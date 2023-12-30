@@ -1,8 +1,8 @@
-import styles from "./styles.css";
+import styles from "./styles.css"
 
 export const links = () => [
     { rel: "stylesheet", href: styles },
-];
+]
 
 export type WideProps = {
     children: React.ReactNode
@@ -14,11 +14,9 @@ const Wide: React.FC<WideProps> = ({ children, ar }) => {
         <section className="wide" style={{
             aspectRatio: ar,
         }}>
-            <div className="wide-content">
-                {children}
-            </div>
+            {children}
         </section>
-    );
+    )
 }
 
 export default Wide

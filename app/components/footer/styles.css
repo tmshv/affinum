@@ -1,0 +1,22 @@
+.footer {
+    max-width: unset;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
+
+.footer-container {
+    width: 100%;
+    max-width: var(--max-width);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+}
+
+@media screen and (max-width: 800px) {
+    .footer-container {
+        padding: 20px 0;
+    }
+}

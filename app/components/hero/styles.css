@@ -1,12 +1,11 @@
 .hero {
-    --padding: 32px;
     --caption-min-width: 450px;
 
     position: relative;
 
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    column-gap: var(--padding);
+    grid-template-columns: 5fr 1fr 6fr;
+    column-gap: 32px;
 
     margin-top: 32px;
 }
@@ -20,7 +19,8 @@
 
 .hero .caption {
     text-align: left;
-    hyphens: auto; /* manual: use &shy; for breaks */
+    hyphens: auto;
+    /* manual: use &shy; for breaks */
 
     max-width: 550px;
 }
@@ -32,8 +32,7 @@
 }
 
 .hero .number .value {
-    font-size: 48px;
-    line-height: 56px;
+    font-size: 96px;
 }
 
 @media screen and (max-width: 800px) {
@@ -41,7 +40,8 @@
         grid-template-columns: 1fr;
     }
 
-    /* .hero .values { */
-    /*     flex-direction: row; */
-    /* } */
+    .hero .number .value {
+        font-size: 40px;
+    }
+
 }

@@ -1,0 +1,16 @@
+.index-head-container {
+    margin: 50px 0 100px 0,
+}
+
+@media screen and (max-width: 768px) {
+
+    .index-numbers-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .index-numbers-container>div {
+        margin: 0;
+    }
+}

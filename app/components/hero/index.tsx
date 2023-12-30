@@ -21,6 +21,8 @@ const Hero: React.FC<HeroProps> = ({ children, area, budget, color = "black" }) 
                 {children}
             </div>
 
+            <div />
+
             <div className="values">
                 <div className="number">
                     <div className="value">

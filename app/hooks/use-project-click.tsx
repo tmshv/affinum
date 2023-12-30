@@ -6,7 +6,7 @@ export default function useProjectClick(layerName: string) {
     const navigate = useNavigate()
     useMapPointer([layerName]);
     useMapClick(() => {
-        navigate("/")
+        navigate("/projects")
     })
     useMapLayerClick(layerName, event => {
         if (event.features!.length > 0) {

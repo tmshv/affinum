@@ -33,7 +33,9 @@ export const links = () => [
 ];
 
 const style: React.CSSProperties = {
-    maxWidth: 300,
+    maxWidth: '400px',
+    padding: '26px',
+    borderRadius: '30px',
 }
 
 type Info = {
@@ -88,7 +90,7 @@ const MapPopup: React.FC<MapPopupProps> = ({ layerName }) => {
         }
 
         map.on("mouseover", layerName, show);
-        map.on("mouseleave", layerName, clear);
+        // map.on("mouseleave", layerName, clear);
 
         return () => {
             map.off("mouseover", layerName, show);
@@ -110,8 +112,9 @@ const MapPopup: React.FC<MapPopupProps> = ({ layerName }) => {
             }}
             // closeOnClick={false}
             closeButton={false}
-            className={"my-popup"}
             style={style}
+            maxWidth='400px'
+            className='map-popup'
         >
             <img
                 className="cover"
@@ -122,8 +125,11 @@ const MapPopup: React.FC<MapPopupProps> = ({ layerName }) => {
             />
             <div className="caption">
                 <p className="caption-head">{quotes(info.name)}</p>
-                <p className="text">{location(info.state, info.city)}</p>
-                <p className="text">{info.caption}</p>
+                <p className="text">
+                    {location(info.state, info.city)}
+                    <br />
+                    {info.caption}
+                </p>
                 {!info.extra ? null : (
                     <p className="caption-footer">{info.extra}</p>
                 )}

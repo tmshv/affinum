@@ -51,7 +51,7 @@ export const ProjectsGrid: React.FC<ProjectsGridProps> = ({ data, isTitle = true
     const [state, setState] = useState(buttons[0].tag)
     const isMobile = useMedia("(max-width: 768px)", false)
     return (
-        <>
+        <section className='projectsGrid'>
             {isTitle && (
                 <h2 style={{
                     marginBottom: 60,
@@ -60,14 +60,7 @@ export const ProjectsGrid: React.FC<ProjectsGridProps> = ({ data, isTitle = true
                 </h2>
             )}
 
-            <div style={{
-                display: 'flex',
-                gap: '2rem',
-                rowGap: 0,
-                color: '#818181',
-                marginBottom: 30,
-                flexWrap: 'wrap',
-            }}>
+            <div className='projectsGrid-filter'>
                 {buttons.map((button, i) => (
                     <div
                         key={button.tag}
@@ -109,6 +102,6 @@ export const ProjectsGrid: React.FC<ProjectsGridProps> = ({ data, isTitle = true
                         </Link>
                     ))}
             </Grid>
-        </>
+        </section>
     )
 }

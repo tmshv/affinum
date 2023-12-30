@@ -1,0 +1,43 @@
+.about-grid-team {
+    margin-bottom: 200px;
+}
+
+.about-grid-team-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20;
+    margin-bottom: 70;
+}
+
+.about-grid-team-item img {
+    aspect-ratio: 26 / 36;
+    object-fit: cover;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .about-grid-team>div {
+        grid-template-columns: 1fr 1fr 1fr !important;
+    }
+
+    .about-grid-team-item img {
+        aspect-ratio: 90 / 130;
+        margin-bottom: 10px;
+    }
+
+    .about-grid-team-item span:first-child {
+        font-size: 11px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 14px;
+    }
+
+    .about-grid-team-item span:last-child {
+        font-size: 11px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 14px;
+    }
+}

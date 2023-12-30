@@ -1,0 +1,109 @@
+/* for the pages like /index, /about, etc.. */
+/* slightly different from project.css */
+
+article {
+    font-size: 22px;
+}
+
+article img {
+    width: 100%;
+}
+
+article h1 {
+    font-family: "Aeroport", Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+
+    font-size: 48px;
+    line-height: normal;
+
+    margin: 0 0 var(--md) 0px;
+}
+
+article h2 {
+    font-family: "Aeroport", Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+
+    font-size: 32px;
+}
+
+article h3 {
+    font-family: "Aeroport", Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+
+    font-size: 20px;
+    line-height: normal;
+
+    margin: 0 0 20px 0;
+}
+
+article p {
+    font-family: "Aeroport", Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+
+    line-height: normal;
+
+    margin: 0 0 32px 0;
+}
+
+
+article strong {
+    font-weight: 500;
+}
+
+article ul {
+    list-style-position: inside;
+    padding-left: 0;
+    font-size: 22px;
+    font-weight: 300;
+}
+
+.center,
+.center p {
+    text-align: center;
+}
+
+.left,
+.left p {
+    text-align: left;
+}
+
+a {
+    color: black;
+}
+
+@media screen and (max-width: 800px) {
+
+    article,
+    article :is(p, span) {
+        font-size: 11px;
+        font-style: normal;
+        font-weight: 300;
+    }
+
+    article h1 {
+        font-size: 36px;
+        line-height: 42px;
+    }
+
+    article h2 {
+        font-size: 15px;
+        line-height: 16px;
+    }
+
+    article ul {
+        font-size: 12px;
+    }
+}
+
+/* mobile  */
+@media screen and (max-width: 500px) {
+    article {
+        left: 0;
+        right: 0;
+        width: auto;
+    }
+}

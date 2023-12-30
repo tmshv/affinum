@@ -71,7 +71,7 @@ const Nav: React.FC<NavProps> = () => {
                     <div
                         className="icons-container"
                         style={{
-                            width: 233,
+                            width: isMobile ? '100%' : 233,
                         }}
                     >
                         {isMobile ? ( // menu button

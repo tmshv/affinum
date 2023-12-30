@@ -93,7 +93,7 @@ export const ProjectsGrid: React.FC<ProjectsGridProps> = ({ data, isTitle = true
                             to={project.href}
                             className={'projectsGrid-cell'}
                             style={{
-                                marginBottom: isMobile ? 20 : 80,
+                                marginBottom: isMobile ? 20 : 40,
                             }}
                         >
                             <img src={project.cover} />
